@@ -4,23 +4,41 @@ import React, { Component } from 'react';
 
 class Menu extends Component {
     constructor() {
-        super();
+      super();
+      this.renderPageOptions = this.renderPageOptions.bind(this);
     }
 
-    renderSelects(elem) {
+    renderPageOptions(elem) {
+      if(elem !=="Links"){
         return(
-            <option value={elem}> {elem} </option>
+            <button key={elem} type="button" value={elem}> {elem} </button>
         );
+      } else{
+        let options = this.props.linkOptions.map(link => {
+          let linkKey = Object.keys(link)[0];
+          let linkVal = link[linkKey];
+          return(<option key={linkKey} value={linkVal}>{linkKey}</option>);
+        })
+        return(
+            <select key={elem}>
+              <option selected disabled> {elem} </option>
+              {options}
+            </select>
+          
+        );
+      }
+
     }
 
   render() {
     return (
       <div className="menu">
-        <select>
-            {this.props.selects.map(elem => {
-                return this.renderSelects(elem);
-            })}
-        </select>
+        
+        {this.props.pageSections.map(elem => {
+          return this.renderPageOptions(elem);
+        })}
+        
+        
       </div>
     );
   }
