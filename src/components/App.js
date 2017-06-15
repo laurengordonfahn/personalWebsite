@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
+import Scroll from 'react-scroll';
+
 import Menu from './menu';
 import DictionarySection from './dictionarySection';
 import List from './list';
 import TextSection from './textSection';
 
+var Link = Scroll.Link;
+var Element = Scroll.Element;
+var Event = Scroll.Event;
+var scroll = Scroll.animateScroll;
+var scrollSpy = Scroll.scrollSpy;
+
 class App extends Component {
   constructor() {
     super();
+    this.handleSetActive = this.handleSetActive.bind(this);
+
     this.state = {
+      pageSections: ["OverView", "Academics", "Projects", "Stack", "About Me", "Resume", "Links"],
+
       overView: [
         {"One Year Goal": "A Front End Developement Role"}, 
         {"Five Year Goal": "Still Loving that Front End Development Role"}, 
@@ -23,7 +35,7 @@ class App extends Component {
         {"Favorite Article of Clothing": "Black Tee-Shirt"}, 
         {"Random Fact": "I love dential floss"}
       ],
-      pageSections: ["OverView", "Academics", "Projects", "Stack", "About Me", "Resume", "Links"],
+      
       linkOptions:[
         {"LinkedIn":"https://www.linkedin.com/in/lauren-gordon-fahn/"}, 
         {"GitHub":"https://github.com/laurengordonfahn"}, 
@@ -31,7 +43,26 @@ class App extends Component {
         {"Project Website : Daily":"http://dailytrackingcalendar.herokuapp.com"}, 
         {"Project Website: Notebook":"http://notebookonline.herokuapp.com"}
       ],
+
       stack: ["Python", "Ruby", "Javascript", "React", "jQuery", "SQL", "PostgreSql", "Flask"],
+
+      projects: [
+        [
+          {"first": "Daily"},
+          {"none": "An emotion tracking calendar. A personal calendar that enables users to summarize their emotions from a day in three adjectives and a representative color. With trending graphics and easy at-a-glance understanding of how they are feeling over time. Built with React and a Flask server."},
+          {"Tech Stack": [" PostgreSQL, SQLAlchemy, Python, Flask, React, Javascript, Ajax, Unittest"]},
+          {"Github": ["https://github.com/laurengordonfahn/daily"]},
+          {"Online": ["https://dailytrackingcalendar.herokuapp.com"]},
+          {"first": "Notebook"},
+          {"none": "A one page dynamic notebook application. Built on a Flask RESTful API. Allows a user to create, edit, reorganize, and delete notes. Sign-In with Facebook."
+          },
+          {"Tech Stack": ["PostgreSQL, SQLAlchemy, Python, Flask, Javascript, jQuery, Ajax, OAuth2, Unittest"]},
+          {"Github": [" https://github.com/laurengordonfahn/notebook"]},
+          {"Online": [" https://notebookonline.herokuapp.com"]}
+        ],
+
+      ],
+
       resume: [
         [
           {"github":["laurengordonfahn"]},
@@ -127,6 +158,9 @@ class App extends Component {
     };
   }
 
+  handleSetActive(to) {
+    console.log(to);
+  }
 
   render() {
     return (
@@ -136,11 +170,30 @@ class App extends Component {
         </h1>
 
         <Menu pageSections={this.state.pageSections} linkOptions={this.state.linkOptions}/>
-        <DictionarySection name="Overview" stateName={this.state.overView} />
-        <DictionarySection name="About Me" stateName={this.state.aboutMe} />
-        <List name="Stack" stateName={this.state.stack} />
-        <TextSection name="Academics" stateName={this.state.academics} />
-        <TextSection name="Resume" stateName={this.state.resume} />
+
+        <Element name="Overview" className="element">
+           <DictionarySection name="Overview" stateName={this.state.overView} />
+        </Element>
+
+         <Element name="Academics" className="element">
+          <TextSection name="Academics" stateName={this.state.academics} />
+        </Element>
+
+        <Element name="Projects" className="element">
+          <TextSection name="Projects" stateName={this.state.projects} />
+        </Element>
+
+        <Element name="Stack" className="element">
+          <List name="Stack" stateName={this.state.stack} />
+        </Element>
+
+        <Element name="About Me" className="element">
+          <DictionarySection name="About Me" stateName={this.state.aboutMe} />
+        </Element>
+        
+        <Element name="Resume" className="element">
+          <TextSection name="Resume" stateName={this.state.resume} />
+        </Element>
 
       </div>
     );

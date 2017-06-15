@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-// import logo from '../logo.svg';
-// import '../App.css';
+var Scroll  = require('react-scroll');
+
+var Link       = Scroll.Link;
+var Element    = Scroll.Element;
+var Events     = Scroll.Events;
+var scroll     = Scroll.animateScroll;
+var scrollSpy  = Scroll.scrollSpy;
 
 class Menu extends Component {
     constructor() {
@@ -11,7 +16,10 @@ class Menu extends Component {
     renderPageOptions(elem) {
       if(elem !=="Links"){
         return(
+           <Link activeClass="active" to={elem} spy={true} smooth={true} offset={0} duration={500} onSetActive={this.handleSetActive}>
             <button key={elem} type="button" value={elem}> {elem} </button>
+          </Link>
+
         );
       } else{
         let options = this.props.linkOptions.map(link => {
