@@ -8,9 +8,11 @@ class List extends Component {
   }
 
   renderList(elem) {
-    return ( 
-      <p key={elem} className="listItem">{elem} </p> 
-    );
+    Object.keys(elem).map(item => {
+      return ( 
+        <p key={item} className="listItem"> {item} </p> 
+      );
+    });
   }
 
   render() {

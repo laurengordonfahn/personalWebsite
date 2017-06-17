@@ -15,12 +15,13 @@ class TextSection extends Component {
       const indVal = miniDict[indKey];
     
       if(indKey ==="first" || indKey==="second" || indKey==="third" || indKey==="none"){
-        
+
         return ( 
-          <div key={indVal} className={'text'+ {indKey}}>{indVal} </div> 
+          <div key={indVal} className={indKey}>{indVal} </div> 
         );
 
       } else {
+      
         const li = miniDict[indKey].map(item => {
           
           return (<li key={item}> {item} </li>);

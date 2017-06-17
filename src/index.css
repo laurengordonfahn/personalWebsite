@@ -1,5 +1,206 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Overpass', sans-serif;
+  color:#212b31;
+}
+
+.dark {
+    background-color: black;
+    height: 170px;
+}
+
+.yourImg {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    margin: -130px;
+}
+
+.headerBuffer {
+    height: 70px;
+
+}
+
+.linkImg {
+    margin: 20px;
+}
+div {
+    white-space:pre;
+}
+
+.nameDiv {
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+
+
+}
+
+.nameDiv h1 {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.oneLinerDiv {
+    text-align: center;
+    border-top: double 3px black;
+    border-bottom: double 3px black;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-style: italic;
+}
+.linkMenu {
+    display: block;
+    margin: 0px;
+
+}
+.linkDiv {
+    display: inline-block;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.innerDiv {
+    display: block;
+
+}
+
+.linkImg {
+   margin-top: 0px; 
+   margin-bottom: 0px;
+   display: block;
+   padding: 10px;
+
+}
+
+.anchorLink {
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    color: black;
+}
+
+.linkTitle {
+    text-align: center;   
+    margin-top:10px;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.linkByline {
+    text-align: center;
+    margin:0px;
+    font-size: 12px;
+    
+}
+
+.menu {
+    
+    background-color: black;
+    text-align: center;
+    height: 30px;
+    position: fixed;
+    top: 70;
+    width: 100%;
+    overflow: hidden; 
+
+}
+.menuButton{
+    margin-top: 0px;
+    margin-left: 1%;
+    margin-right: 1%;
+    border: none;
+    border-bottom: solid black 1px;
+    background-color: black;
+    color: white;
+
+}
+
+.dictHeader {
+  /*  margin-top: 30px;*/
+
+}
+
+.dictText {
+    display: block;
+
+}
+
+.dictKey {
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+
+}
+
+.dictVal {
+    display: inline-block;
+    margin: 5px;
+    font-style: oblique;
+
+}
+
+
+.listHeader {
+    display: inline-block;
+    margin: 5px;
+}
+
+.listText {
+    
+}
+
+.listItem {
+    display: inline-block;
+    margin: 5px;
+    font-style: oblique;
+
+}
+
+.textHeader {
+    margin: 5px;
+}
+
+.first {
+    font-weight: bold;
+    margin: 5px;
+}
+
+.second {
+    font-style: oblique;
+    margin: 5px;
+}
+
+.third {
+    margin: 5px;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.none {
+    margin: 15px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.Stack .textSecond {
+    margin: 5px;
+    font-weight: bold;
+    margin: 15px;
+    display: inline-block;
+    
+}
+
+.Stack li {
+    display: inline-block;
+    font-weight: normal;
+    margin: 5px;
 }

@@ -2,41 +2,32 @@ import React, { Component } from 'react';
 var Scroll  = require('react-scroll');
 
 var Link       = Scroll.Link;
-var Element    = Scroll.Element;
-var Events     = Scroll.Events;
-var scroll     = Scroll.animateScroll;
-var scrollSpy  = Scroll.scrollSpy;
+
 
 class Menu extends Component {
-    constructor() {
-      super();
-      this.renderPageOptions = this.renderPageOptions.bind(this);
-    }
+  constructor() {
+    super();
+    this.renderPageOptions = this.renderPageOptions.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-    renderPageOptions(elem) {
-      if(elem !=="Links"){
-        return(
-           <Link activeClass="active" to={elem} spy={true} smooth={true} offset={0} duration={500} onSetActive={this.handleSetActive}>
-            <button key={elem} type="button" value={elem}> {elem} </button>
-          </Link>
+  
+  handleClick(e){
+    this.props.handleClick(e.target.value);
+  }
 
-        );
-      } else{
-        let options = this.props.linkOptions.map(link => {
-          let linkKey = Object.keys(link)[0];
-          let linkVal = link[linkKey];
-          return(<option key={linkKey} value={linkVal}>{linkKey}</option>);
-        })
-        return(
-            <select key={elem}>
-              <option selected disabled> {elem} </option>
-              {options}
-            </select>
-          
-        );
-      }
 
-    }
+  renderPageOptions(elem) {
+    
+    return(
+      <Link key={elem} activeClass="active" to={elem} spy={true} smooth={true} offset={-25} duration={500} onSetActive={this.handleSetActive} handleClick={this.props.handleClick}>
+        <button className="menuButton" onClick={e => {this.handleClick(e);}} type="button" value={elem}> {elem} </button>
+      </Link>
+
+    );
+
+
+  }
 
   render() {
     return (
