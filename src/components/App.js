@@ -17,13 +17,18 @@ import githubGlyph from '../github.png';
 import linkedInGlyph from '../linkedin.png';
 
 
-var Element = Scroll.Element;
+var Link       = Scroll.Link;
+var Element    = Scroll.Element;
+var Events     = Scroll.Events;
+var scroll     = Scroll.animateScroll;
+var scrollSpy  = Scroll.scrollSpy;
 
 class App extends Component {
   constructor() {
     super();
     this.handleClick= this.handleClick.bind(this);
     this.handleScrollCallback = this.handleScrollCallback.bind(this);
+    // this.scrollToTop=scrollToTop.bind(this);
 
     this.state = {
       yourName: "Lauren Gordon-Fahn",
@@ -150,36 +155,44 @@ class App extends Component {
     };
   }
 
+  // componentWillUpdate(){
+  //   this.handleScrollCallback();
+  //   this.handleClick(this.state.subSection);
+  // }
   
   handleScrollCallback() {
       window.addEventListener('scroll', (e => {
+        console.log(e);
         let scroll_position = window.scrollY;
-        this.setState({last_known_scroll_position :scroll_position});
-        if (! this.state.ticking){
-          if (window.scrollY===70){
-            var menuClass = document.getElementsByClassName("menu")[0];
-            menuClass.style.top='70';
-          }
-
+        console.log(scroll_position);
+        
+        if (scroll_position <= 70){
+          var menuClass = document.getElementsByClassName("menu")[0];
+          menuClass.style.top='70';
+          console.log("should reset")
         }
-        this.setState({ticking: true});
+        
+        this.setState({last_known_scroll_position : scroll_position});
 
       }));
 
   }
 
+
   handleClick(to) {
     console.log("handleClick in app running");
     console.log(to);
-    var scroll_position = this.state.last_known_scroll_position;
+    var scroll_position = window.scrollY;
     var menuClass = document.getElementsByClassName("menu")[0];
     if (to !== "Overview"){
       menuClass.style.top='0';
     }
-    else if (to ==="Overview" || scroll_position === 0) {
+    else if (to ==="Overview") {
       console.log("running handle Click else if");
       menuClass.style.top='70';
+      scroll.scrollToTop();
     }
+
     this.setState({subSection: to});
   }
 
