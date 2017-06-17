@@ -3,7 +3,7 @@ import Scroll from 'react-scroll';
 import ScrollEvent from 'react-onscroll';
 
 import Header from './header';
-import Menu from './menu';
+import MainMenu from './mainMenu';
 import LinkMenu from './linkMenu';
 import DictionarySection from './dictionarySection';
 import TextSection from './textSection';
@@ -19,22 +19,19 @@ import linkedInGlyph from '../linkedin.png';
 
 var Link       = Scroll.Link;
 var Element    = Scroll.Element;
-var Events     = Scroll.Events;
-var scroll     = Scroll.animateScroll;
-var scrollSpy  = Scroll.scrollSpy;
+
 
 class App extends Component {
   constructor() {
     super();
     this.handleClick= this.handleClick.bind(this);
     this.handleScrollCallback = this.handleScrollCallback.bind(this);
-    // this.scrollToTop=scrollToTop.bind(this);
 
     this.state = {
       yourName: "Lauren Gordon-Fahn",
       oneLiner: "Junior Developer, In Love With Javascript!",
       yourImg: yourImg,
-      pageSections: ["Overview", "Academics", "Projects", "Stack", "About Me", "Work Experience"],
+      pageSections: ["Top", "Overview", "Academics", "Projects", "Stack", "About Me", "Work Experience"],
 
       overView: [
         {"One Year Goal": "A Front End Developement Role"}, 
@@ -150,67 +147,62 @@ class App extends Component {
       ],
 
       subSection: "Overview",
-      last_known_scroll_position : 0,
-      ticking : false
+      isTop: false,
+      // scrollPosition: {top:'0px'}
+    
     };
   }
 
-  // componentWillUpdate(){
-  //   this.handleScrollCallback();
-  //   this.handleClick(this.state.subSection);
-  // }
-  
   handleScrollCallback() {
-      window.addEventListener('scroll', (e => {
-        console.log(e);
-        let scroll_position = window.scrollY;
-        console.log(scroll_position);
-        
-        if (scroll_position <= 70){
-          var menuClass = document.getElementsByClassName("menu")[0];
-          menuClass.style.top='70';
-          console.log("should reset")
-        }
-        
-        this.setState({last_known_scroll_position : scroll_position});
+  
+      // console.log("window scroll y position", window.scrollY);
+      // let scrollPosition = this.state.scrollPosition;
 
-      }));
-
+      if(window.scrollY > 430){
+        
+        this.setState({isTop : true});
+      } 
+      else if (window.scrollY < 430) {
+        this.setState({isTop: false});
+      }
   }
 
-
   handleClick(to) {
-    console.log("handleClick in app running");
-    console.log(to);
-    var scroll_position = window.scrollY;
-    var menuClass = document.getElementsByClassName("menu")[0];
-    if (to !== "Overview"){
-      menuClass.style.top='0';
-    }
-    else if (to ==="Overview") {
-      console.log("running handle Click else if");
-      menuClass.style.top='70';
-      scroll.scrollToTop();
-    }
+    
+    // var menuClass = document.getElementsByClassName("menu")[0];
+    if (to ==="Overview") {
+     
+      this.setState({isTop: false, subSection: to});
 
-    this.setState({subSection: to});
+      
+    } 
+    else if (to === "Top") {
+      this.setState({isTop: true, subSection: to});
+    }
+    else if (to !== "Overview"){
+
+      this.setState({isTop: false, subSection: to});
+      
+    }
+    
+   
   }
 
   render() {
     return (
       <div className="App">
 
-         <ScrollEvent handleScrollCallback={this.handleScrollCallback} />
+        <ScrollEvent handleScrollCallback={this.handleScrollCallback} />
+        <Element name="Top" className="element">  
+          <Header name="header" yourImg={this.state.yourImg} />
+        </ Element>
 
-        <Header name="header" yourImg={this.state.yourImg} yourName={this.state.yourName} oneLiner={this.state.oneLiner}/>
+        <MainMenu name="mainMenu" pageSections={this.state.pageSections} menuStyle={this.state.scrollPosition} yourName={this.state.yourName} oneLiner={this.state.oneLiner} isTop={this.state.isTop} handleClick={this.handleClick} linkOptions={this.state.linkOptions} linkOptions={this.state.linkOptions}/>
 
-        <LinkMenu linkOptions={this.state.linkOptions} />
-
-        <Menu pageSections={this.state.pageSections} handleClick={this.handleClick} linkOptions={this.state.linkOptions}/>
-
-        <Element name="Overview" className="element">
+         <Element name="Overview" className="element">
            <DictionarySection name="Overview" stateName={this.state.overView} />
         </Element>
+        
 
          <Element name="Academics" className="element">
           <TextSection name="Academics" stateName={this.state.academics} />

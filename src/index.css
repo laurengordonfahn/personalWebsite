@@ -9,6 +9,21 @@ body {
     background-color: black;
     height: 170px;
 }
+.mainMenu {
+    margin-bottom: 10px;
+
+}
+.innerMainMenu {
+    /*position: fixed;*/
+    width: 100%;
+    overflow: hidden; 
+    display: block;
+
+}
+
+.Overview {
+
+}
 
 .yourImg {
     border-radius: 50%;
@@ -37,8 +52,6 @@ div {
     font-size: 25px;
     text-align: center;
     color: black;
-
-
 }
 
 .nameDiv h1 {
@@ -100,17 +113,30 @@ div {
     
 }
 
-.menu {
+.lowMenu {
     
     background-color: black;
     text-align: center;
     height: 30px;
     position: fixed;
-    top: 70;
+    top: 0;
     width: 100%;
     overflow: hidden; 
 
 }
+
+.highMenu {
+    
+    background-color: black;
+    text-align: center;
+    height: 30px;
+    /*position: fixed;*/
+    top: 0;
+    width: 100%;
+    overflow: hidden; 
+
+}
+
 .menuButton{
     margin-top: 0px;
     margin-left: 1%;
