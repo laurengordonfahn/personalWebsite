@@ -20,14 +20,16 @@ class DictionarySection extends Component {
 
   render() {
     return (
-      <div className={this.props.name}>
-        <h1 className="dictHeader"> {this.props.name} </h1>
-        <div className="dictText">
+      <div className="dictionarySection">
+        <div className={this.props.name}>
+          <h1 className="dictHeader"> {this.props.name} </h1>
+          <div className="dictText">
 
-          {this.props.stateName.map(elem => {
-            return this.renderDictionaryInfo(elem);
-          })}
+            {this.props.stateName.map(elem => {
+              return this.renderDictionaryInfo(elem);
+            })}
 
+          </div>
         </div>
       </div>
     );

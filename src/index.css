@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Overpass', sans-serif;
+  font-family: helvetica;
   color:#212b31;
 }
 
@@ -117,7 +117,7 @@ div {
     
     background-color: black;
     text-align: center;
-    height: 30px;
+    height: 50px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -147,9 +147,12 @@ div {
     color: white;
 
 }
+.dictionarySection{
+    margin: 10px;
+}
 
 .dictHeader {
-  /*  margin-top: 30px;*/
+  font-size: 30px;
 
 }
 
@@ -162,16 +165,21 @@ div {
     display: inline-block;
     margin: 5px;
     font-weight: bold;
+    font-size: 18px;
 
 }
 
 .dictVal {
     display: inline-block;
     margin: 5px;
-    font-style: oblique;
+    font-size: 15px;
+    font-weight: lighter;
 
 }
 
+.listSection {
+    margin: 10px;
+}
 
 .listHeader {
     display: inline-block;
@@ -188,18 +196,38 @@ div {
     font-style: oblique;
 
 }
-
+.textSection{
+    margin: 10px;
+}
 .textHeader {
-    margin: 5px;
+    font-size: 30px;
+    margin-bottom:0px;
+
 }
 
-.first {
+.textDict{
     font-weight: bold;
+    font-size: 15px;
     margin: 5px;
+    margin-top: 0px;
+}
+
+.textList {
+    font-weight: lighter;
+    font-size: 15px;
+    margin: 5px;
+    margin-bottom:0px;
+}
+.first {
+    margin: 5px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .second {
     font-style: oblique;
+    font-weight: lighter;
+    font-size: 15px;
     margin: 5px;
 }
 
@@ -210,11 +238,21 @@ div {
 }
 
 .none {
-    margin: 15px;
+    margin-left: 15px;
+    padding: 12px;
 }
 
 li {
     list-style-type: none;
+}
+.Projects ul {
+    height :40px;
+}
+.Projects .none {
+    padding: 5px;
+}
+.Projects .first {
+    margin-top:10px;
 }
 
 .Stack .textSecond {

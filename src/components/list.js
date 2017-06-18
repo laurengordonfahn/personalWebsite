@@ -17,16 +17,18 @@ class List extends Component {
 
   render() {
     return (
-      <div className={this.props.name} >
-        <h1 className="listHeader"> {this.props.name} </h1>
-        <div className="listText">
+      <div className="listSection">
+        <div className={this.props.name} >
+          <h1 className="listHeader"> {this.props.name} </h1>
+          <div className="listText">
 
-          {this.props.stateName.map(elem => {
-            return this.renderList(elem);
-          })}
+            {this.props.stateName.map(elem => {
+              return this.renderList(elem);
+            })}
 
+          </div>
         </div>
-      </div>
+      </div?
     );
   }
 }

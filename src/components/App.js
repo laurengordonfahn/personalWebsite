@@ -82,7 +82,9 @@ class App extends Component {
           {"none": "An emotion tracking calendar. A personal calendar that enables users to summarize their emotions from a day in three adjectives and a representative color. With trending graphics and easy at-a-glance understanding of how they are feeling over time. Built with React and a Flask server."},
           {"Tech Stack": [" PostgreSQL, SQLAlchemy, Python, Flask, React, Javascript, Ajax, Unittest"]},
           {"Github": ["https://github.com/laurengordonfahn/daily"]},
-          {"Online": ["https://dailytrackingcalendar.herokuapp.com"]},
+          {"Online": ["https://dailytrackingcalendar.herokuapp.com"]}
+        ],
+        [
           {"first": "Notebook"},
           {"none": "A one page dynamic notebook application. Built on a Flask RESTful API. Allows a user to create, edit, reorganize, and delete notes. Sign-In with Facebook."
           },
@@ -102,11 +104,11 @@ class App extends Component {
           {"first": "Experience"},
           {"third": "Acupuncturist Gordon Medical Associates:"},
           {"third": "Santa Rosa, CA - 2014-2016"},
-          {"none": "Translated Eastern techniques into Western context in weekly educational presentations to physicians, helping reprioritize treatment protocols.  \n Regularly improving treatment time and providing better patient outcomes. \n Educated patients on techniques to support their medical progress. \n 2015-2016 patient Acupuncturist and Herbalist."
+          {"none": "Translated Eastern techniques into Western context in weekly educational presentations to physicians, helping reprioritize treatment protocols. \nRegularly improving treatment time and providing better patient outcomes.\nEducated patients on techniques to support their medical progress.\n2015-2016 patient Acupuncturist and Herbalist."
           },
           {"third": "Meditation Instructor/Acupuncturist/Owner Second Arrow Healing:"},
           {"third": "Petaluma, CA - 2014-2016"},
-          {"none": "Created content for monthly educational newsletters and advertising. \n Wrote and taught meditation classes and workshops. \n Created specialized treatment protocols for patients through herbs, meditation, and acupuncture."
+          {"none": "Created content for monthly educational newsletters and advertising. \nWrote and taught meditation classes and workshops. \nCreated specialized treatment protocols for patients through herbs, meditation, and acupuncture."
           }     
         ]
       ],
@@ -158,11 +160,11 @@ class App extends Component {
       // console.log("window scroll y position", window.scrollY);
       // let scrollPosition = this.state.scrollPosition;
 
-      if(window.scrollY > 430){
+      if(window.scrollY > 450){
         
         this.setState({isTop : true});
       } 
-      else if (window.scrollY < 430) {
+      else if (window.scrollY < 450) {
         this.setState({isTop: false});
       }
   }

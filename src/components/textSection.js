@@ -24,12 +24,12 @@ class TextSection extends Component {
       
         const li = miniDict[indKey].map(item => {
           
-          return (<li key={item}> {item} </li>);
+          return (<li key={item} className="textList"> {item} </li>);
         });
 
         return (
-          <div key={indVal} className="textSecond"> {indKey} 
-            <ul> {li} </ul>
+          <div key={indVal} className="textDict">
+            <ul> {indKey} {li} </ul>
           </div>
         );
       }
@@ -41,14 +41,16 @@ class TextSection extends Component {
   render() {
     
     return (
-      <div className={this.props.name} >
-        <h1 className="textHeader"> {this.props.name} </h1>
-        <div className="textText">
+      <div className="textSection">
+        <div className={this.props.name} >
+          <h1 className="textHeader"> {this.props.name} </h1>
+          <div className="textText">
 
-          {this.props.stateName.map(elem => {
-            return this.renderText(elem);
-          })}
+            {this.props.stateName.map(elem => {
+              return this.renderText(elem);
+            })}
 
+          </div>
         </div>
       </div>
     );
