@@ -8,7 +8,7 @@ import LinkMenu from './linkMenu';
 import DictionarySection from './dictionarySection';
 import TextSection from './textSection';
 
-import yourImg from '../yourImg.jpg';
+import yourImg from '../lauren_profile.jpg';
 import calendarGlyph from '../calendar.png';
 import notebookGlyph from '../notebook.png';
 import newspaperGlyph from '../newspaper.png';
@@ -150,7 +150,7 @@ class App extends Component {
 
       subSection: "Overview",
       isTop: false,
-      // scrollPosition: {top:'0px'}
+      offsetVal: -250
     
     };
   }
@@ -160,12 +160,12 @@ class App extends Component {
       // console.log("window scroll y position", window.scrollY);
       // let scrollPosition = this.state.scrollPosition;
 
-      if(window.scrollY > 450){
+      if(window.scrollY > 250){
         
-        this.setState({isTop : true});
+        this.setState({isTop : true, offsetVal: -100});
       } 
-      else if (window.scrollY < 450) {
-        this.setState({isTop: false});
+      else if (window.scrollY < 250) {
+        this.setState({isTop: false, offsetVal: 0});
       }
   }
 
@@ -178,6 +178,7 @@ class App extends Component {
 
       
     } 
+    
     else if (to === "Top") {
       this.setState({isTop: true, subSection: to});
     }
