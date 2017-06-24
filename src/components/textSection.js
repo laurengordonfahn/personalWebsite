@@ -7,10 +7,32 @@ class TextSection extends Component {
     super();
     this.renderText = this.renderText.bind(this);
     this.renderLinkImgDiv = this.renderLinkImgDiv.bind(this);
+    this.handleForwardClick = this.handleForwardClick.bind(this);
+    this.handleBackwardClick = this.handleBackwardClick.bind(this);
     this.state = {
       isCurrent: 0
     };
   }
+
+  handleBackwardClick(e, lenCarousel) {
+      
+      let current = this.state.isCurrent
+      if ((current - 1) != -1) {
+        current = (current - 1)%lenCarousel;
+        this.setState({isCurrent: current});
+      } 
+      else{ 
+        current = (lenCarousel -1);
+        this.setState({isCurrent: current});
+      }
+    }
+
+    handleForwardClick(e, lenCarousel) {
+      let current = this.state.isCurrent;
+      current = (current + 1)%lenCarousel;
+      this.setState({isCurrent: current});
+    }
+
 
   renderLinkImgDiv (obj) {
     let name=obj.name;
@@ -48,7 +70,7 @@ class TextSection extends Component {
     
         return(
 
-          <Carousel key={elem[indKey]} name={this.props.name} isCurrent={this.state.isCurrent} imgList={imgList} lenCarousel={lenCarousel} />
+          <Carousel key={elem[indKey]} name={this.props.name} isCurrent={this.state.isCurrent} imgList={imgList} carouselInfo={miniDict[indKey]} handleBackwardClick={this.handleBackwardClick} handleForwardClick={this.handleForwardClick} />
         );
       } 
       else if (indKey==="linkImg"){

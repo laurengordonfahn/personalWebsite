@@ -98,33 +98,29 @@ class App extends Component {
       projects: [
         [ {"first": "Daily"},
           {"img": {
-            "name":"Daily", "byline":"dailyimg", "img": [daily1, daily2, daily3]}
-          },
-          {"linkImg": [
-            {
-            "name":"GitHub", "byline":"githublink", "link": "https://github.com/laurengordonfahn/daily", "img": githubGlyph
-            },
-            {
-            "name":"Daily", "byline":"dailylink", "link": "https://dailytrackingcalendar.herokuapp.com", "img": calendarGlyph
-            }
-          ]},
-          
+            "name":"Daily", "byline":"dailyimg", "img": [daily1, daily2, daily3], "linkImg": [
+              {
+              "name":"GitHub", "byline":"githublink", "link": "https://github.com/laurengordonfahn/daily", "img": githubGlyph
+              },
+              {
+              "name":"Daily", "byline":"projectlink",  "link": "https://dailytrackingcalendar.herokuapp.com", "img": calendarGlyph
+              }
+            ]
+          }},
           {"none": "Daily is an emotion tracking calendar. A personal calendar that enables users to summarize their emotions from a day in three adjectives and a representative color. With trending graphics and easy at-a-glance understanding of how they are feeling over time. Built with React and a Flask server."},
           {"Tech Stack": [" PostgreSQL, SQLAlchemy, Python, Flask, React, Javascript, Ajax, Unittest"]}
-          
         ],
         [
           {"first": "Notebook"},
           {"img": {
-            "name":"Notebook", "byline":"notebookimg1", "img": [notebook1, notebook2]}
-          },
-          {"linkImg": [
-            {
-            "name":"GitHub", "byline":"GitHubLink", "link": "https://github.com/laurengordonfahn/notebook", "img": githubGlyph
-            },{
-            "name":"Notebook", "byline":"noteBookLink", "link": "https://notebookonline.herokuapp.com", "img": notebookGlyph
-            }
-          ]},
+            "name":"Notebook", "byline":"notebookimg1", "img": [notebook1, notebook2], "linkImg": [
+              {
+              "name":"GitHub", "byline":"GitHubLink", "link": "https://github.com/laurengordonfahn/notebook", "img": githubGlyph
+              },{
+              "name":"Notebook", "byline":"projectLink", "link": "https://notebookonline.herokuapp.com", "img": notebookGlyph
+              }
+            ]
+          }},
           {"none": "Notebook is a one page dynamic notebook application. Built on a Flask RESTful API. Allows a user to create, edit, reorganize, and delete notes. Sign-In with Facebook."
           },
           {"Tech Stack": ["PostgreSQL, SQLAlchemy, Python, Flask, Javascript, jQuery, Ajax, OAuth2, Unittest"]}
@@ -197,7 +193,7 @@ class App extends Component {
     else if (to === "Top") {
       this.setState({isTop: false, offSetVal: -80, subSection: to});
     }
-    else if (to !== "Projects"){
+    else if (to != "Projects"){
 
       this.setState({isTop: false, offSetVal: -80, subSection: to});
       

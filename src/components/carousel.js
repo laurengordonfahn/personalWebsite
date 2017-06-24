@@ -1,33 +1,11 @@
 import React, { Component } from 'react';
+import LinkImages from './linkImages';
 
 class Carousel extends Component {
   constructor(){
     super();
     this.renderCarouselImg = this.renderCarouselImg.bind(this);
-    this.handleForwardClick = this.handleForwardClick.bind(this);
-    this.handleBackwardClick = this.handleBackwardClick.bind(this);
-    
-  }
-
-  handleBackwardClick () {
-    let current = this.props.isCurrent;
-    let lenCarousel = this.props.lenCarousel;
-    if ((current -1) != -1) {
-      current = (current -1)%lenCarousel;
-      this.setState({isCurrent: 0});
-    } 
-    else{ 
-      current = (lenCarousel -1);
-    }
-    this.setState({isCurrent: current});
-  }
-
-  handleForwardClick () {
-    let current = this.props.isCurrent;
-    let lenCarousel = this.props.lenCarousel;
-    current = (current +1)%lenCarousel;
-
-    this.setState({isCurrent: current});
+    this.renderLinkImgDiv = this.renderLinkImgDiv.bind(this);
   }
 
   renderCarouselImg(img, i) {
@@ -35,15 +13,29 @@ class Carousel extends Component {
     return ( 
       
         <li key={img}>
-          <img className="carouselImg" className={i == isCurrent ? "isSeen": "isNotSeen"} src={img} alt={img} />
+          <img className="carouselImg" className={i === isCurrent ? "isSeen": "isNotSeen"} src={img} alt={img} />
         </li>
       
       );
   }
 
+  renderLinkImgDiv(linkImg){
+    let name=linkImg.name;
+    let byline=linkImg.byline;
+    let link=linkImg.link;
+    let img=linkImg.img;
+
+    return(
+      <LinkImages key={link} name={name} byline={byline} link={link} img={img} />
+      
+    );
+        
+  }
+
   render() {
     let name = "carousel" + this.props.name
-    if (this.props.lenCarousel > 1){
+    let lenCarousel = this.props.imgList.length;
+    if (lenCarousel > 1){
       return (
         <div className="imgCarouselDiv">
           <div className={name}>
@@ -57,8 +49,13 @@ class Carousel extends Component {
             </ul>
 
             <div className="btnCarouselDiv">
-              <button className="btnbackwardImg" onClick={(e)=>{this.handleForwardClick(e)}} > </button>
-              <button className="btnforwardImg" onClick={(e)=>{this.handleBackwardClick(e)}} > </button>
+              <div className="carouselDirectBtnDiv">
+                <div className="btnbackwardImg" value="backward" onClick={(e)=>{this.props.handleBackwardClick(e, lenCarousel)}} > &larr; </div>
+                <div className="btnforwardImg" value="forward" onClick={(e)=>{this.props.handleForwardClick(e, lenCarousel)}} > &rarr; </div>
+              </div>
+              <div className="carouselLinkBtnDiv">
+                {this.props.carouselInfo.linkImg.map(linkImg => { return this.renderLinkImgDiv(linkImg)})}
+              </div>
             </div>
           </div>
         </div>
@@ -75,6 +72,9 @@ class Carousel extends Component {
               })}
 
             </ul>
+            <div className="carouselLinkBtnDiv">
+                {this.props.carouselInfo.linkImg.map(linkImg => { return this.renderLinkImgDiv(linkImg)})}
+            </div>
           </div>
         </div>
       );
