@@ -129,14 +129,6 @@ class App extends Component {
 
       ],
 
-      experience: [
-        // [
-        //   {"github":["laurengordonfahn"]},
-        //   {"linkedin": ["linkedin.com/in/lauren-gordon-fahn"]}
-        // ],
-          
-      ],
-
       subSection: "Overview",
       isTop: false,
       y: window.scrollY ,

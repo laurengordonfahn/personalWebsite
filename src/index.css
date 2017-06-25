@@ -5,6 +5,7 @@ body {
 /* Row 1: Header*/
 /* Row 1.1: Personal Image*/
 .imgDiv {
+    /*height is keep div sized to hold image*/
     height: 225px;
 }
 .yourImg {
@@ -12,7 +13,8 @@ body {
     border-radius: 50%;
     height: 200px;
     width: 200px;
-    position: absolute;
+    /*postion relative is to keep picture in place but responsive*/
+    position: relative;
     left: 40%;
 }
 /*Row 1.2: Personal Name*/
@@ -34,23 +36,23 @@ body {
 /* Row 2: Main Menu*/
 .menuButton {
     background-color: #d0dbe2;
-    margin-top: 0px;
     margin-left: 4%;
     margin-right: 4%;
-    border: none;
-    margin-top: 20px;   
+    border: none;   
 
 }
 /* Row 2: Main Menu On Opening Page*/
 .menuStart {
     background-color: #d0dbe2;
     text-align: center;
-    height: 60px;
-    position: fixed;
     top: 0;
     width: 100%;
-    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*z index to combate textsection img carousel */
     z-index: 10;
+    /*fixed position to keep at top of page until scroll*/
+    position: fixed;
 }
 
 /* Row 2: Main Menu on Scrolling Page 
@@ -58,108 +60,181 @@ Moves to top of page */
 .menuTop {
     background-color: #d0dbe2;
     text-align: center;
-    height: 60px;
     top: 0;
     width: 100%;
-    overflow: hidden; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*z index to combate textsection img carousel */
     z-index: 10;
 }
 
-/* Row 3/5: TextSection Components General (Project Section /About Me)*/
-/* Row 3.first Title of TextSection */
-/* Row 3.none Text section of TextSection */
-/* Row 3.img Image section of TextSection */
-/* Row 3.img.button Buttons section of TextSection Images*/
-
-
-
-
-.ImagesSection {
-    margin-left: 40%;
-}
-
-.textLinkImgDiv {
-    
-    height: 60px;
-    display: inline-block;
-    float: left;
-    margin-left: 610px;
-}
-
-
+/* TextSection Components General (Project Section /About Me)*/
 .textSection{
     margin-left: 10%;
     margin-top: 30px;
 }
-
+/* TextSection Head Title of TextSection */
 .textHeader{
     font-size: 35px;
     font-weight: lighter;
-
 }
-
-.none {
-    display: block;
-    font-weight: lighter;
-
-}
+/* TextSection.first Sub Title of TextSection */
 .first{
     font-size: 20px;
     margin-top:20px;
     margin-bottom:20px;
 }
-
-.textDict, ul {
-    display: inline-block;
-    padding-left: 0px;
+/* TextSection.none Text section of TextSection */
+.none {
+    display: block;
+    font-weight: lighter;
 }
-
+/* TextSection List with Header (Projects -Tech Stack, AboutMe-Thought Process)*/
+/*Text section List Header*/
 .textListHeader {
     font-weight: bold;
 }
+/* TextSection list content*/
+.textDict, ul {
+    display: inline-block;
+    padding-left: 0px;
 
+}
 .textList {
-    font-weight: lighter;
+   font-weight: lighter; 
+}
+/* TextSection.img Image section of TextSection */
+.imgCarouselDiv{
+    width: 50%;
+    padding: 0px;
+    margin-left: 20%;
 }
 
-.listSection {
-    margin-left: 10%;
-    margin-top: 30px;
+.imgCarouselList {
+    position: relative;
+    height: 400px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: block;
 }
-.listHeader {
-    font-size: 35px;
-    font-weight: lighter;
+.carouselProjects li img{
+    border: 1px gray solid;
+/*    width: 500px;
+    width: 100%;*/
 }
 
-.listTitle {
-    font-size: 16px;
-    font-weight: bold;
+.isSeen {
+    position: relative;
+    /*position: absolute;*/
+    /*height: 100%;*/
+    opacity: 1;
+    z-index: 2;
     display: inline-block;
-    margin-right: 10px;
-
 }
 
-.listListItem{
-    font-weight: lighter;
+.isNotSeen {
+    position: relative;
+    /*position: absolute;*/
+    /*height: 100%;*/
+    opacity: 0;
+    z-index: 1;
     display: inline-block;
-    margin-left: 5px;
-    margin-right: 10px;
 }
-/*.Stack .textSecond {
-    margin: 5px;
-    font-weight: bold;
-    margin: 15px;
-    display: inline-block;
+
+@media only screen and (max-width: 1000px) {
     
+    .header{
+        width: 100vw;
+    }
+    .menuStart {
+        background-color: #d0dbe2;
+        text-align: center;
+        top: 0;
+        width: 100vw;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /*z index to combate textsection img carousel */
+        z-index: 10;
+        /*fixed position to keep at top of page until scroll*/
+        /*position: absolute;*/
+    }
+
+    .textSection {
+        margin-left: 0px;
+    }
+
+   .imgCarouselDiv{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+
+        /*margin-left: 20%;*/
+    } 
+    .carouselProjects li img{
+        border: 1px gray solid;
+       /*width: 500px;*/
+        width: 100%;
+    }
+
+    .btnCarouselDiv {
+        margin-top: 20px;
+    }
 }
 
-.Stack li {
+
+/* TextSection.img.button Buttons section of TextSection Images*/
+.btnCarouselDiv {
+    display: block;
+
+}
+
+
+.btnbackwardImg {
+    float: left;
+    position: relative;
+    font-size: 25px;
+    left: 15px;
+    color: black;
+}
+
+.btnforwardImg {
+    float: right;
+    position: relative;
+    font-size: 25px; 
+    right: 15px;
+    color:black;
+}
+
+.carouselDirectBtnDiv{
     display: inline-block;
-    font-weight: lighter;
-    margin: 5px;
+    padding: 3px;
+    height: 35px;
+    width: 100px;
+   /* margin-left: 20%;*/
+    margin-top: 10px;
+    background-color: #d0dbe2;
+    border-radius: 5px;
 }
-*/
 
+.carouselLinkBtnDiv{
+    display: inline-block;
+   /* margin-left: 300px;*/
+}
+
+.carouselLinkBtnDiv.anchorLink{
+    margin-right: 10px;
+}
+
+.anchorLink {
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    color: black;
+
+}
+
+/*Specialty TextSection for AboutMe section*/
 .About .textDict {
     overflow:auto;
     display: block;
@@ -169,12 +244,35 @@ Moves to top of page */
     margin-right: 10px;
     margin-bottom: 5px;
 }
-.About li {
-  /*  display: flex;*/
-}
-.About li {
 
+.About li {
     font-size: 13px;
+}
+
+/* List Component Section (Stack Section)*/
+/*General List Section- same spacing as TextSection*/
+.listSection {
+    margin-left: 10%;
+    margin-top: 30px;
+}
+/*List Section Name*/
+.listHeader {
+    font-size: 35px;
+    font-weight: lighter;
+}
+/*Sub List Titles*/
+.listTitle {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+/*List Items*/
+.listListItem{
+    font-weight: lighter;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 10px;
 }
 
 ul {
@@ -202,7 +300,6 @@ ul {
 }
 .innerDiv {
     display: block;
-
 }
 
 .linkImg {
@@ -212,9 +309,16 @@ ul {
    padding-left: 30%;
 
 }
+.linkDiv li {
+    text-align: center;
+}
+
+.linDiv[alt="Notebook"]{
+    padding-left: 35%;
+}
 
 .linkTitle {
-    text-align: center;   
+    /*text-align: center;*/   
     margin-top:10px;
     font-size: 12px;
     margin-bottom: 0px;
@@ -226,88 +330,4 @@ ul {
     font-size: 12px;
 }
 
-.imgCarouselDiv{
-    width: 500px;
-    padding: 0px;
-    margin-left: 20%;
 
-}
-
-.carouselProjects li img{
-    border: 1px gray solid;
-    width: 500px;
-}
-
-.isSeen {
-    position: absolute;
-    height: 100%;
-    opacity: 1;
-    z-index: 2;
-    display: inline-block;
-    margin-left:20%;
-}
-
-.isNotSeen {
-    position: absolute;
-    height: 100%;
-    opacity: 0;
-    z-index: 1;
-    display: inline-block;
-    margin-left:20%;
-}
-
-.imgCarouselList {
-    position: relative;
-    height: 300px;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-    display: block;
-}
-
-.btnCarouselDiv {
-    display: block;
-
-}
-
-.carouselDirectBtnDiv{
-    display: inline-block;
-    padding: 3px;
-    height: 35px;
-    width: 100px;
-    margin-left: 20%;
-    margin-top: 10px;
-    background-color: #d0dbe2;
-    border-radius: 5px;
-}
-
-.carouselLinkBtnDiv{
-    display: inline-block;
-   /* margin-left: 300px;*/
-}
-
-
-.anchorLink {
-    display: inline-block;
-    float: left;
-    text-decoration: none;
-    color: black;
-    margin-right: 10px;
-
-}
-
-.btnbackwardImg {
-    float: left;
-    position: relative;
-    font-size: 25px;
-    left: 15px;
-    color: black;
-}
-
-.btnforwardImg {
-    float: right;
-    position: relative;
-    font-size: 25px; 
-    right: 15px;
-    color:black;
-}
