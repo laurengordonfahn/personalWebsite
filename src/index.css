@@ -171,6 +171,16 @@ Moves to top of page */
 
         /*margin-left: 20%;*/
     } 
+
+    .imgCarouselList {
+        position: relative;
+        /*height: 400px;*/
+        padding: 0px;
+        margin: 0px;
+        
+        list-style-type: none;
+        display: block;
+}
     .carouselProjects li img{
         border: 1px gray solid;
        /*width: 500px;*/
@@ -182,6 +192,45 @@ Moves to top of page */
     }
 }
 
+@media only screen and (max-width: 577px){
+   .imgCarouselList {
+        position: relative;
+        /*height: 400px;*/
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 10px;
+        list-style-type: none;
+        display: block;
+    } 
+}
+
+@media only screen and (max-width: 530px) {
+
+    .imgDiv{
+        padding-right: 40%;
+    }
+
+    .textHeader, .first, .none, .textDict {
+        margin-left: 10%;
+    }
+
+    .btnCarouselDiv {
+        margin-bottom: 10px;
+        padding-left: 25%;
+    }
+    .imgCarouselList {
+        position: relative;
+        /*height: 400px;*/
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: -30%;
+        list-style-type: none;
+        display: block;
+    }
+
+    
+
+}
 
 /* TextSection.img.button Buttons section of TextSection Images*/
 .btnCarouselDiv {
