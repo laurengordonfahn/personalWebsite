@@ -165,22 +165,21 @@ Moves to top of page */
     }
 
    .imgCarouselDiv{
-        width: 100%;
+        width: 70%;
         padding: 0px;
         margin: 0px;
-
-        /*margin-left: 20%;*/
+        padding-left: 10%;
     } 
 
     .imgCarouselList {
         position: relative;
-        /*height: 400px;*/
+        height: 400px;
         padding: 0px;
         margin: 0px;
-        
         list-style-type: none;
         display: block;
-}
+    }
+
     .carouselProjects li img{
         border: 1px gray solid;
        /*width: 500px;*/
@@ -190,12 +189,38 @@ Moves to top of page */
     .btnCarouselDiv {
         margin-top: 20px;
     }
+    .textHeader, .first, .none, .textDict {
+        margin-left: 10%;
+    }
 }
-
-@media only screen and (max-width: 577px){
+@media only screen and (max-width: 900px){
+    /*.imgCarouselDiv {
+        width: 90%;
+    }*/
    .imgCarouselList {
         position: relative;
-        /*height: 400px;*/
+        height: 250px;
+        padding: 0px;
+        margin: 0px;
+        /*background-color: orange;*/
+        padding-bottom: 15%;
+        /*margin-bottom: 0px;*/
+        list-style-type: none;
+        display: block;
+    } 
+}
+
+@media only screen and (max-width: 580px){
+    .imgCarouselDiv{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+
+        margin-left: 20%;
+    } 
+   .imgCarouselList {
+        position: relative;
+        height: 300px;
         padding: 0px;
         margin: 0px;
         margin-bottom: 10px;
@@ -223,6 +248,7 @@ Moves to top of page */
         /*height: 400px;*/
         padding: 0px;
         margin: 0px;
+        padding-bottom: 10%;
         margin-bottom: -30%;
         list-style-type: none;
         display: block;

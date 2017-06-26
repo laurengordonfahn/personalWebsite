@@ -14,9 +14,9 @@ class TextSection extends Component {
     };
   }
 
-  handleBackwardClick(e, lenCarousel) {
-      
-      let current = this.state.isCurrent
+  handleBackwardClick(lenCarousel) {
+      // console.log("backward", e, lenCarousel);
+      let current = this.state.isCurrent;
       if ((current - 1) != -1) {
         current = (current - 1)%lenCarousel;
         this.setState({isCurrent: current});
@@ -27,7 +27,8 @@ class TextSection extends Component {
       }
     }
 
-    handleForwardClick(e, lenCarousel) {
+    handleForwardClick(lenCarousel) {
+      // console.log("forward", e, lenCarousel);
       let current = this.state.isCurrent;
       current = (current + 1)%lenCarousel;
       this.setState({isCurrent: current});
