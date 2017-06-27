@@ -4,7 +4,7 @@ class LinkImages extends Component {
  
 
   render() {
-    let classN = "LinkImagesSection" + " " + this.props.byline
+    // let classN = "LinkImagesSection" + " " + this.props.byline
     return (
       
         

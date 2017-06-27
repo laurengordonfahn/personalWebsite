@@ -6,6 +6,18 @@ class Carousel extends Component {
     super();
     this.renderCarouselImg = this.renderCarouselImg.bind(this);
     this.renderLinkImgDiv = this.renderLinkImgDiv.bind(this);
+    this.backwardClick = this.backwardClick.bind(this);
+    this.forwardClick =this.forwardClick.bind(this);
+  }
+
+  backwardClick(e, lenCarousel){
+    console.log("e")
+    this.props.handleBackwardClick(e, lenCarousel);
+  }
+
+   forwardClick(e, lenCarousel){
+    console.log("e")
+    this.props.handleForwardClick(e, lenCarousel);
   }
 
   renderCarouselImg(img, i) {
@@ -50,8 +62,8 @@ class Carousel extends Component {
 
             <div className="btnCarouselDiv">
               <div className="carouselDirectBtnDiv">
-                <div className="btnbackwardImg" value="backward" onClick={(e) => {this.props.handleBackwardClick} }> &larr; </div>
-                <div className="btnforwardImg" value="forward" onClick={(e) => {this.props.handleForwardClick} } > &rarr; </div>
+                <div className="btnbackwardImg" onClick={e => {this.backwardClick(e, lenCarousel);} }> &larr; </div>
+                <div className="btnforwardImg" onClick={e => {this.forwardClick(e, lenCarousel);} } > &rarr; </div>
               </div>
               <div className="carouselLinkBtnDiv">
                 {this.props.carouselInfo.linkImg.map(linkImg => { return this.renderLinkImgDiv(linkImg)})}

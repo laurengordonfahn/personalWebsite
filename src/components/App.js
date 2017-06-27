@@ -6,11 +6,12 @@ import ReactTimeout from "react-timeout";
 import Header from './header';
 import Menu from './menu';
 import LinkMenu from './linkMenu';
-import DictionarySection from './dictionarySection';
+// import DictionarySection from './dictionarySection';
 import TextSection from './textSection';
 import List from './list';
 
-import yourImg from '../lauren_profile.jpg';
+// import yourImg from '../lauren_profile.jpg';
+import yourImg from '../LaurenHydranga.jpeg';
 import calendarGlyph from '../calendar.png';
 import notebookGlyph from '../notebook.png';
 import newspaperGlyph from '../newspaper.png';
@@ -22,10 +23,11 @@ import daily2 from '../daily2.png';
 import daily3 from '../daily3.png';
 import notebook1 from '../notebook1.png';
 import notebook2 from '../notebook2.png';
+import resume from '../LaurenGordon-Fahn_Resume6_17.pdf';
 
 
 
-var Link       = Scroll.Link;
+// var Link       = Scroll.Link;
 var Element    = Scroll.Element;
 
 
@@ -44,12 +46,12 @@ class App extends Component {
 
       aboutMe:[
         [
-          {"none": "I am a passionate and compassionate problem solver with a B.S. in Theoretical Mathmatics, a Masters in Acupuncture & Chinese Medicine, and Hackbright bootcamp under my belt. I am in love with making organization tools that are user friendly through software engineering. I love solving problems with a team be it engieering or of the human body."}
+          {"none": "I am a passionate and compassionate problem solver with a B.S. in Theoretical Mathmatics, a Masters in Acupuncture & Chinese Medicine, and Hackbright bootcamp under my belt. I am in love with making organization tools that are user friendly through software engineering. I love solving problems with a team be it engieers or doctors."}
         ],
         [
           {"Traits of Math Mind":  
             [
-              "A love for Logical Thought and problem solving", "Organization of large bodies of information", "The importance of examiing a problem near and far"
+              "A love for logical thought and problem solving", "Organization of large bodies of information", "The importance of examining a problem near and far"
             ]
           }
         ],
@@ -84,6 +86,9 @@ class App extends Component {
         }], 
         [{
           "name": "Notebook", "byline": "NotebookProjectLink", "link": "http://notebookonline.herokuapp.com", "img": notebookGlyph
+        }],
+        [{
+          "name": "Resume", "byline": "Resume", "link": resume, "img": newspaperGlyph
         }]
       ],
 
@@ -107,7 +112,7 @@ class App extends Component {
               }
             ]
           }},
-          {"none": "Daily is an emotion tracking calendar. A personal calendar that enables users to summarize their emotions from a day in three adjectives and a representative color. With trending graphics and easy at-a-glance understanding of how they are feeling over time. Built with React and a Flask server."},
+          {"none": "Daily is an emotion tracking calendar. A personal calendar that enables users to summarize their emotions from a day in three adjectives and a representative color. With trending graphics and easy at-a-glance understanding of how they are feeling over time. Built with React and a Flask API."},
           {"Tech Stack": [" PostgreSQL, SQLAlchemy, Python, Flask, React, Javascript, Ajax, Unittest"]}
         ],
         [
@@ -152,13 +157,13 @@ class App extends Component {
     if (window.scrollY > 310){
       this.reSetOffSet();
       let sections = this.state.pageSections;
-      if (sections[0] != 'Top') {
+      if (sections[0] !== 'Top') {
         sections.unshift('Top');
         this.setState({pageSections : sections}); 
       }
       
     } else {
-      let sections = this.state.pageSections.filter(val => val != 'Top');
+      let sections = this.state.pageSections.filter(val => val !== 'Top');
       this.setState({pageSections : sections}); 
     }
 
@@ -174,7 +179,7 @@ class App extends Component {
 
   handleClick(to) {
     const headerHeight = this.state.headerHeight
-    if (to ==="Projects") {
+    if (to === "Projects") {
       if (this.state.y < headerHeight){
         this.setState({isTop: false, offSetVal: -150,subSection: to});
       } else {
@@ -185,13 +190,11 @@ class App extends Component {
     else if (to === "Top") {
       this.setState({isTop: false, offSetVal: -80, subSection: to});
     }
-    else if (to != "Projects"){
+    else if (to !== "Projects"){
 
       this.setState({isTop: false, offSetVal: -80, subSection: to});
       
     }
-    
-   
   }
 
   render() {

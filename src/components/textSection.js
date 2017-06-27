@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Images from './images';
+// import Images from './images';
 import LinkImages from './linkImages';
 import Carousel from './carousel';
 class TextSection extends Component {
@@ -14,10 +14,11 @@ class TextSection extends Component {
     };
   }
 
-  handleBackwardClick(lenCarousel) {
-      // console.log("backward", e, lenCarousel);
+  handleBackwardClick(e, lenCarousel) {
+      console.log("backward",lenCarousel);
       let current = this.state.isCurrent;
-      if ((current - 1) != -1) {
+      console.log("isCurrent", current);
+      if ((current - 1) !== -1) {
         current = (current - 1)%lenCarousel;
         this.setState({isCurrent: current});
       } 
@@ -27,9 +28,10 @@ class TextSection extends Component {
       }
     }
 
-    handleForwardClick(lenCarousel) {
-      // console.log("forward", e, lenCarousel);
+    handleForwardClick(e, lenCarousel) {
+      console.log("forward",lenCarousel);
       let current = this.state.isCurrent;
+      console.log("isCurrent", current);
       current = (current + 1)%lenCarousel;
       this.setState({isCurrent: current});
     }
@@ -37,7 +39,6 @@ class TextSection extends Component {
 
   renderLinkImgDiv (obj) {
     let name=obj.name;
-    let byLine=obj.byLine;
     let link=obj.link;
     let img=obj.img;
 
@@ -66,7 +67,6 @@ class TextSection extends Component {
 
       } 
       else if (indKey ==="img"){
-        let lenCarousel = indVal["img"].length;
         let imgList = indVal["img"];
     
         return(
@@ -74,6 +74,7 @@ class TextSection extends Component {
           <Carousel key={elem[indKey]} name={this.props.name} isCurrent={this.state.isCurrent} imgList={imgList} carouselInfo={miniDict[indKey]} handleBackwardClick={this.handleBackwardClick} handleForwardClick={this.handleForwardClick} />
         );
       } 
+      
       else if (indKey==="linkImg"){
         
         return(
