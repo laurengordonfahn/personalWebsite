@@ -13,7 +13,7 @@ class LinkMenu extends Component {
       let img= elem[0]["img"];
       let byline=elem[0]["byline"]
 
-      
+
       return(
         <li key={name} className="linkDiv">
           
@@ -21,7 +21,7 @@ class LinkMenu extends Component {
               <img className="linkImg" src={img} alt={name} />  
               <span className="linkTitle">{name} </span>
               < br/>
-              <span className="linkByline"> {byline} </span>
+              
             </a>
      
         </li>
