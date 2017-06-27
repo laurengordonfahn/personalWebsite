@@ -46,24 +46,24 @@ class App extends Component {
 
       aboutMe:[
         [
-          {"none": "I am a passionate and compassionate problem solver with a B.S. in Theoretical Mathematics, a Masters in Acupuncture & Chinese Medicine, and Hackbright bootcamp under my belt. I am in love with making organization tools that are user friendly through software engineering. I love solving problems with a team be it engineers or doctors."}
+          {"none": "I am a passionate and compassionate problem solver with a B.S. in Theoretical Mathematics, a Masters in Acupuncture & Chinese Medicine, and Hackbright bootcamp under my belt. I am in love with making organization tools that are user friendly through software engineering. I love solving problems with a team, be it engineers or doctors."}
         ],
         [
-          {"Traits of Math Mind":  
+          {"Traits of a Math Mind":  
             [
               "A love for logical thought and problem solving", "Organization of large bodies of information", "The importance of abstraction in solving problems"
             ]
           }
         ],
         [
-          {"Traits of an Acupuncture's Thinking" : 
+          {"Traits of an Acupuncturist" : 
             [
               "Listening", "Dedicated to team work", "Organizing strategic long term plans for treatment", "Explaining information that is not native to someone"
             ]
           }
         ],
         [
-          {"Traits of an Bootcamp Graduate":  
+          {"Traits of a Bootcamp Graduate":  
             [
               "Fast dedicated learner", "Being humble and googling my heart out"
             ]
@@ -113,7 +113,7 @@ class App extends Component {
             ]
           }},
           {"none": "Daily is an emotion tracking calendar in which users summarize their emotions on a day-to-day basis.  It provides trending graphics and at-a-glance understanding of how the user's mood changes over time. Built with React and a Flask API."},
-          {"Tech Stack": [" PostgreSQL, SQLAlchemy, Python, Flask, React, Javascript, Ajax, Unittest"]}
+          {"Tech Stack": [" PostgreSQL, SQLAlchemy, Python, Flask, React, JavaScript, Ajax, Unittest"]}
         ],
         [
           {"first": "Notebook"},
@@ -128,7 +128,7 @@ class App extends Component {
           }},
           {"none": "Notebook is a one-page dynamic notebook application which allows users to create, edit, organize, and delete notes.  Facebook Sign-In is used for authentication and the app is powered by a RESTful API written with Flask."
           },
-          {"Tech Stack": ["PostgreSQL, SQLAlchemy, Python, Flask, Javascript, jQuery, Ajax, OAuth2, Unittest"]}
+          {"Tech Stack": ["PostgreSQL, SQLAlchemy, Python, Flask, JavaScript, jQuery, Ajax, OAuth2, Unittest"]}
   
         ],
 
