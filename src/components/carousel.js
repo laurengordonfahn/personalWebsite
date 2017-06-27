@@ -6,24 +6,39 @@ class Carousel extends Component {
     super();
     this.renderCarouselImg = this.renderCarouselImg.bind(this);
     this.renderLinkImgDiv = this.renderLinkImgDiv.bind(this);
-    this.backwardClick = this.backwardClick.bind(this);
-    this.forwardClick =this.forwardClick.bind(this);
+    this.handleForwardClick = this.handleForwardClick.bind(this);
+    this.handleBackwardClick = this.handleBackwardClick.bind(this);
+    this.state = {
+      isCurrent: 0
+    };
   }
 
-  backwardClick(e, lenCarousel){
-    console.log("e")
-    this.props.handleBackwardClick(e, lenCarousel);
-  }
+  handleBackwardClick(e, lenCarousel) {
+      console.log("backward",lenCarousel);
+      let current = this.state.isCurrent;
+      console.log("isCurrent", current);
+      if ((current - 1) !== -1) {
+        current = (current - 1)%lenCarousel;
+        this.setState({isCurrent: current});
+      } 
+      else{ 
+        current = (lenCarousel -1);
+        this.setState({isCurrent: current});
+      }
+    }
 
-   forwardClick(e, lenCarousel){
-    console.log("e")
-    this.props.handleForwardClick(e, lenCarousel);
-  }
+    handleForwardClick(e, lenCarousel) {
+      console.log("forward",lenCarousel);
+      let current = this.state.isCurrent;
+      console.log("isCurrent", current);
+      current = (current + 1)%lenCarousel;
+      this.setState({isCurrent: current});
+    }
 
   renderCarouselImg(img, i) {
-    let isCurrent = this.props.isCurrent;
+    let isCurrent = this.state.isCurrent;
+    console.log("i", i)
     return ( 
-      
         <li key={img}>
           <img className="carouselImg" className={i === isCurrent ? "isSeen": "isNotSeen"} src={img} alt={img} />
         </li>
@@ -62,8 +77,8 @@ class Carousel extends Component {
 
             <div className="btnCarouselDiv">
               <div className="carouselDirectBtnDiv">
-                <div className="btnbackwardImg" onClick={e => {this.backwardClick(e, lenCarousel);} }> &larr; </div>
-                <div className="btnforwardImg" onClick={e => {this.forwardClick(e, lenCarousel);} } > &rarr; </div>
+                <div className="btnbackwardImg" onClick={e => {this.handleBackwardClick(e, lenCarousel);} }> &larr; </div>
+                <div className="btnforwardImg" onClick={e => {this.handleForwardClick(e, lenCarousel);} } > &rarr; </div>
               </div>
               <div className="carouselLinkBtnDiv">
                 {this.props.carouselInfo.linkImg.map(linkImg => { return this.renderLinkImgDiv(linkImg)})}

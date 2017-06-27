@@ -116,6 +116,8 @@ Moves to top of page */
 
 .imgCarouselList {
     position: relative;
+    /*height is essential for .isSeen position absolute to have static location as anscestor*/
+    height: 400px;
     padding: 0px;
     margin: 0px;
     list-style-type: none;
@@ -283,7 +285,9 @@ Moves to top of page */
     font-size: 25px;
     left: 15px;
     color: black;
+    cursor: pointer;
 }
+
 
 .btnforwardImg {
     float: right;
@@ -291,6 +295,7 @@ Moves to top of page */
     font-size: 25px; 
     right: 15px;
     color:black;
+    cursor: pointer;
 }
 
 .carouselDirectBtnDiv{
@@ -302,15 +307,12 @@ Moves to top of page */
     margin-top: 10px;
     background-color: #d0dbe2;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .carouselLinkBtnDiv{
     display: inline-block;
-   /* margin-left: 300px;*/
-}
-
-.carouselLinkBtnDiv.anchorLink{
-    margin-right: 10px;
+    margin-left: 15px;
 }
 
 .anchorLink {
@@ -318,8 +320,13 @@ Moves to top of page */
     float: left;
     text-decoration: none;
     color: black;
-
 }
+
+.carouselLinkBtnDiv .anchorLink{
+    margin-right: 15px;
+}
+
+
 
 /*Specialty TextSection for AboutMe section*/
 .About .textDict {
