@@ -40,13 +40,13 @@ class App extends Component {
 
     this.state = {
       yourName: "Lauren Gordon-Fahn",
-      oneLiner: "San Francisco Junior Developer, In Love With Javascript!",
+      oneLiner: "San Francisco Junior Developer, In Love With JavaScript!",
       yourImg: yourImg,
       pageSections: ["Projects", "Stack", "About Me", "Contacts"],
 
       aboutMe:[
         [
-          {"none": "I am a passionate and compassionate problem solver with a B.S. in Theoretical Mathmatics, a Masters in Acupuncture & Chinese Medicine, and Hackbright bootcamp under my belt. I am in love with making organization tools that are user friendly through software engineering. I love solving problems with a team be it engieers or doctors."}
+          {"none": "I am a passionate and compassionate problem solver with a B.S. in Theoretical Mathematics, a Masters in Acupuncture & Chinese Medicine, and Hackbright bootcamp under my belt. I am in love with making organization tools that are user friendly through software engineering. I love solving problems with a team be it engineers or doctors."}
         ],
         [
           {"Traits of Math Mind":  
@@ -58,7 +58,7 @@ class App extends Component {
         [
           {"Traits of an Acupuncture's Thinking" : 
             [
-              "Listening", "Dedicated to team work", "Organizing stratigic long term plans for treatment", "Explaining information that is not native to someone"
+              "Listening", "Dedicated to team work", "Organizing strategic long term plans for treatment", "Explaining information that is not native to someone"
             ]
           }
         ],
