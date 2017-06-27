@@ -130,8 +130,8 @@ Moves to top of page */
 }
 
 .isSeen {
-    position: relative;
-    /*position: absolute;*/
+    /*position: relative;*/
+    position: absolute;
     /*height: 100%;*/
     opacity: 1;
     z-index: 2;
@@ -139,8 +139,8 @@ Moves to top of page */
 }
 
 .isNotSeen {
-    position: relative;
-    /*position: absolute;*/
+    /*position: relative;*/
+    position: absolute;
     /*height: 100%;*/
     opacity: 0;
     z-index: 1;

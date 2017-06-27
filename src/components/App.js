@@ -51,7 +51,7 @@ class App extends Component {
         [
           {"Traits of Math Mind":  
             [
-              "A love for logical thought and problem solving", "Organization of large bodies of information", "The importance of examining a problem near and far"
+              "A love for logical thought and problem solving", "Organization of large bodies of information", "The importance of abstraction in solving problems"
             ]
           }
         ],
@@ -93,9 +93,9 @@ class App extends Component {
       ],
 
       stack:[
-        [ {"Languages":["Python","Ruby","JavaScript(ES6, Ajax, JSON)", "HTML", "CSS", "SQL"]},
+        [ {"Languages":["Python","Ruby","JavaScript(ES6, React, JSON)", "HTML", "CSS", "SQL"]},
           {"Operating Systems":["Mac OS X", "Linux"]},
-          {"Frameworks/Libraries": ["Flask", "React", "jQuery", "Bootstrap"]},
+          {"Frameworks/Libraries": ["Flask", "React", "Ajax", "jQuery", "Bootstrap"]},
           {"Database/Tools": ["PostgreSQL", "Git", "Github", "Command Line"]}
         ]
       ],
@@ -112,7 +112,7 @@ class App extends Component {
               }
             ]
           }},
-          {"none": "Daily is an emotion tracking calendar. A personal calendar that enables users to summarize their emotions from a day in three adjectives and a representative color. With trending graphics and easy at-a-glance understanding of how they are feeling over time. Built with React and a Flask API."},
+          {"none": "Daily is an emotion tracking calendar in which users summarize their emotions on a day-to-day basis.  It provides trending graphics and at-a-glance understanding of how the user's mood changes over time. Built with React and a Flask API."},
           {"Tech Stack": [" PostgreSQL, SQLAlchemy, Python, Flask, React, Javascript, Ajax, Unittest"]}
         ],
         [
@@ -126,7 +126,7 @@ class App extends Component {
               }
             ]
           }},
-          {"none": "Notebook is a one page dynamic notebook application. Built on a Flask RESTful API. Allows a user to create, edit, reorganize, and delete notes. Sign-In with Facebook."
+          {"none": "Notebook is a one-page dynamic notebook application which allows users to create, edit, organize, and delete notes.  Facebook Sign-In is used for authentication and the app is powered by a RESTful API written with Flask."
           },
           {"Tech Stack": ["PostgreSQL, SQLAlchemy, Python, Flask, Javascript, jQuery, Ajax, OAuth2, Unittest"]}
   
