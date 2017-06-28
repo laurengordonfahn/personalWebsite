@@ -111,7 +111,7 @@ Moves to top of page */
 .imgCarouselDiv{
     width: 50%;
     padding: 0px;
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
 .imgCarouselList {
@@ -218,6 +218,12 @@ Moves to top of page */
 }
 
 @media only screen and (max-width: 655px){
+    .imgDiv {
+    /*height is keep div sized to hold image*/
+    height: 225px;
+    margin-top: 20px;
+    
+}
     .imgCarouselDiv{
         width: 90%;
         padding: 0px;
@@ -236,12 +242,23 @@ Moves to top of page */
     } 
     .carouselProjects li img{
         border: 1px gray solid;
-        /*height: 300px;*/
+        height: 300px;
         width: 90%;
     }
     .btnCarouselDiv {
         margin-top: 10px;
         margin-left: 0px;
+    }
+
+    .linkMenu {
+        overflow:auto;
+        display: block;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        padding-top: 10px;
+        text-align: center;
+        background-color: #d0dbe2;
     }
 }
 
@@ -254,19 +271,53 @@ Moves to top of page */
         width: 90%;
         padding: 0px;
         margin: 0px;
-
         margin-left: 10%;
     } 
 
     .imgCarouselList {
         position: relative;
-        /*height: 400px;*/
+        height: 250px;
         padding: 0px;
         margin: 0px;
-        padding-bottom: 10%;
         margin-bottom: 10px;
         list-style-type: none;
         display: block;
+    }
+
+    .carouselProjects li img{
+        border: 1px gray solid;
+        height: 250px;
+        width: 90%;
+    }
+    
+}
+
+@media only screen and (max-width: 420px) {
+
+    .textHeader, .first, .none, .textDict {
+        margin-left: 10%;
+    }
+    .imgCarouselDiv{
+        /*width: 90%;*/
+        padding: 0px;
+        margin: 0px;
+        margin-left: 10%;
+    } 
+
+    .imgCarouselList {
+        position: relative;
+        height: 150px;
+        padding: 0px;
+        margin: 0px;
+       /* padding-bottom: 10%;
+*/        margin-bottom: 10px;
+        list-style-type: none;
+        display: block;
+    }
+    .carouselProjects li img{
+        border: 1px gray solid;
+        height: 150px;
+        width: 90%;
     }
 
     
@@ -378,6 +429,7 @@ ul {
     display: block;
     width: 100%;
     padding: 0px;
+    padding-top: 10px;
     margin: 0px;
     text-align: center;
     background-color: #d0dbe2;
