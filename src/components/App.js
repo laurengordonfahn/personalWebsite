@@ -10,7 +10,6 @@ import LinkMenu from './linkMenu';
 import TextSection from './textSection';
 import List from './list';
 
-// import yourImg from '../lauren_profile.jpg';
 import yourImg from '../LaurenHydranga.jpeg';
 import calendarGlyph from '../calendar.png';
 import notebookGlyph from '../notebook.png';
@@ -23,7 +22,7 @@ import daily2 from '../daily2.png';
 import daily3 from '../daily3.png';
 import notebook1 from '../notebook1.png';
 import notebook2 from '../notebook2.png';
-import resume from '../LaurenGordon-Fahn_Resume6_17.pdf';
+import resume from '../LaurenGordon-Fahn_Resume7_17.pdf';
 
 
 
