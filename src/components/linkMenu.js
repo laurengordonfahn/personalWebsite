@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class LinkMenu extends Component {
     constructor() {
@@ -39,6 +40,11 @@ class LinkMenu extends Component {
       </ul>
     );
   }
+}
+
+//check linkOptions
+LinkMenu.propTypes = {
+  linkOptions: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default LinkMenu;

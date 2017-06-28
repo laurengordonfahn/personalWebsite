@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 // import Images from './images';
 import LinkImages from './linkImages';
 import Carousel from './carousel';
@@ -96,4 +97,8 @@ class TextSection extends Component {
   }
 }
 
+TextSection.propTypes = {
+  name: PropTypes.string,
+  stateName: PropTypes.arrayOf(PropTypes.object)
+}
 export default TextSection;

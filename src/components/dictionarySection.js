@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class DictionarySection extends Component {
   constructor(){
@@ -35,5 +36,11 @@ class DictionarySection extends Component {
     );
   }
 }
+
+DictionarySection.propTypes = {
+  name: PropTypes.string,
+  stateName: PropTypes.arrayOf(PropTypes.object) 
+}
+
 
 export default DictionarySection;

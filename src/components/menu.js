@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 var Scroll  = require('react-scroll');
 
 var Link       = Scroll.Link;
@@ -36,6 +38,12 @@ class Menu extends Component {
       </div>
     );
   }
+}
+
+Menu.propTypes = {
+  isTop: PropTypes.bool,
+  pageSelections: PropTypes.array,
+  offSet: PropTypes.number
 }
 
 export default Menu;

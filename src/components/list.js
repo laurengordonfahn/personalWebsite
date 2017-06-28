@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class List extends Component {
   constructor(){
@@ -41,6 +42,12 @@ class List extends Component {
       </div>
     );
   }
+}
+
+// stateName check
+List.propTypes = {
+  name: PropTypes.string,
+  stateName: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default List;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import LinkImages from './linkImages';
 
 class Carousel extends Component {
@@ -108,6 +109,11 @@ class Carousel extends Component {
     }
 
   }
+}
+//check imgList
+Carousel.propTypes = {
+  name: PropTypes.string,
+  imgList: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default Carousel;

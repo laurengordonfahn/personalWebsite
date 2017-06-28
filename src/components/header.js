@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Header extends Component {
   constructor(){
@@ -41,5 +42,11 @@ class Header extends Component {
     );
   }
 }
-
+//yourImg is a string but it is an image
+Header.propTypes = {
+  name: PropTypes.string,
+  yourImg: PropTypes.string,
+  yourName: PropTypes.string,
+  oneLiner: PropTypes.string
+}
 export default Header;
