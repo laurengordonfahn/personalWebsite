@@ -1,33 +1,33 @@
-#Personl Website
+# Personal Website
 
-##Project Description:
+## Project Description:
 
 Personal Website is a static, responsive, React application. 
-Personal Website is built with componantized code that enbles anyone's personal information to be loaded quickly into React state variables and instantly presented in a clean website format.
+Personal Website is built with compartmentalized code that enables anyone's personal information to be loaded quickly into React state variables and instantly presented in a clean website format.
 
 Featuring responsive long scroll and menu scroll nav.
 
-##Features:
+## Features:
 1) Responsive Long Scroll
 2) Menu Scroll Nav
 3) Reusable components for general website design
 
 ## Getting Started:
 
-##Prerequisites:
+## Prerequisites:
 
-#Prerequisites General Information:
+# Prerequisites General Information:
 Personal Website is a static node.js React application.
 This means that you will need node/create-react-app dependencies. 
 Node and React's dependencies are found in package.json. You will need either node's npm or yarn installer to successfully download the libraries noted in packages.json.
 
-#Prerequisites Steps:
+# Prerequisites Steps:
 1) Download the project in a directory of its own. Navigate into the new directory and type in the following command.  
-
+```
     $ git clone git@github.com:laurengordonfahn/personalWebsite.git
+```
 
-
-2) Download package.json dependencies using yarn OR npm. The following command will source all dependencies in package.json. If you are not certain if you have yarn visit https://yarnpkg.com/lang/en/docs/install/.  Yarn will create yarn.lock which will show you all subdependencies utilized. Yarn also offers 'yarn upgrade' a command that will help you keep dependency libraries uptodate. 
+2) Download package.json dependencies using yarn OR npm. The following command will source all dependencies in package.json. If you are not certain if you have yarn visit https://yarnpkg.com/lang/en/docs/install/.  Yarn will create yarn.lock which will show you all sub-dependencies utilized. Yarn also offers 'yarn upgrade' a command that will help you keep dependency libraries up-to-date. 
 ```
     $ yarn install
 ```
@@ -63,7 +63,7 @@ If using npm :
 ```
 ## Installing:
 
-1) To run the frontend:
+1) To run the front-end:
 ```
     $ yarn run 
 ```
