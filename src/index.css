@@ -5,21 +5,18 @@ body {
 }
 /* Row 1: Header*/
 /* Row 1.1: Personal Image*/
-.imgDiv {
-    /*height is keep div sized to hold image*/
-    height: 225px;
-    
-}
+
 .yourImg {
-    margin-top: 25px;
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     /*postion relative is to keep picture in place but responsive*/
     position: relative;
     /*Center picture in div*/
     display: block;
     margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 /*Row 1.2: Personal Name*/
 .yourName {
@@ -43,11 +40,12 @@ body {
     margin-left: 4%;
     margin-right: 4%;
     border: none;   
+    color: black;
 
 }
 /* Row 2: Main Menu On Opening Page*/
 .menuStart {
-    background-color: #d0dbe2;
+    background-color:#d0dbe2;
     text-align: center;
     top: 0;
     width: 100%;
@@ -218,12 +216,7 @@ Moves to top of page */
 }
 
 @media only screen and (max-width: 655px){
-    .imgDiv {
-    /*height is keep div sized to hold image*/
-    height: 225px;
-    margin-top: 20px;
-    
-}
+  
     .imgCarouselDiv{
         width: 90%;
         padding: 0px;

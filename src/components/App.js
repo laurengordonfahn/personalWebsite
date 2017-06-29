@@ -10,7 +10,7 @@ import LinkMenu from './linkMenu';
 import TextSection from './textSection';
 import List from './list';
 
-import yourImg from '../LaurenHydranga.jpeg';
+import yourImg from '../lauren_headshot.jpg';
 import calendarGlyph from '../calendar.png';
 import notebookGlyph from '../notebook.png';
 import newspaperGlyph from '../newspaper.png';
