@@ -10,19 +10,19 @@ import LinkMenu from './linkMenu';
 import TextSection from './textSection';
 import List from './list';
 
-import yourImg from '../lauren_headshot.jpg';
+import yourImg from '../images/lauren_headshot.jpg';
 import calendarGlyph from '../images/calendar.png';
-import notebookGlyph from '../notebook.png';
-import newspaperGlyph from '../newspaper.png';
-import facebookGlyph from '../facebook.png';
-import githubGlyph from '../github.png';
-import linkedInGlyph from '../linkedin.png';
-import daily1 from '../daily1a.png';
-import daily2 from '../daily2a.png';
-import daily3 from '../daily3a.png';
-import notebook1 from '../notebook1a.png';
-import notebook2 from '../notebook2a.png';
-import resume from '../LaurenGordon-Fahn_Resume7_17.pdf';
+import notebookGlyph from '../images/notebook.png';
+import newspaperGlyph from '../images/newspaper.png';
+import facebookGlyph from '../images/facebook.png';
+import githubGlyph from '../images/github.png';
+import linkedInGlyph from '../images/linkedin.png';
+import daily1 from '../images/daily1a.png';
+import daily2 from '../images/daily2a.png';
+import daily3 from '../images/daily3a.png';
+import notebook1 from '../images/notebook1a.png';
+import notebook2 from '../images/notebook2a.png';
+import resume from '../images/LaurenGordon-Fahn_Resume7_17.pdf';
 
 
 
