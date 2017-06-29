@@ -11,7 +11,7 @@ import TextSection from './textSection';
 import List from './list';
 
 import yourImg from '../lauren_headshot.jpg';
-import calendarGlyph from '../calendar.png';
+import calendarGlyph from '../images/calendar.png';
 import notebookGlyph from '../notebook.png';
 import newspaperGlyph from '../newspaper.png';
 import facebookGlyph from '../facebook.png';
