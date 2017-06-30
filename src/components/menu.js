@@ -22,7 +22,7 @@ class Menu extends Component {
     return(
       <Link key={elem} activeClass="active" to={elem} spy={true} smooth={true} offset={this.props.offSetVal} duration={500} onSetActive={this.handleSetActive} >
 
-        <button className="menuButton" onClick={e => {this.handleClick(e);}} type="button" value={elem}> {elem} </button>
+        <button className="menuButton button" onClick={e => {this.handleClick(e);}} type="button" value={elem}> {elem} </button>
       </Link>
     );
   }

@@ -1,39 +1,39 @@
-body {
+/*body {
     font-family: 'Overpass', sans-serif;
     margin: 0;
 
-}
+}*/
+
 /* Row 1: Header*/
 /* Row 1.1: Personal Image*/
 
 .yourImg {
     border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    /*postion relative is to keep picture in place but responsive*/
-    position: relative;
-    /*Center picture in div*/
-    display: block;
-    margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 25px;
+    /* relative keep in place responive margin auto and block */
+    margin: 0 auto;
+    position: relative;
+    display: block;
 }
 /*Row 1.2: Personal Name*/
 .yourName {
     text-align: center;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: lighter;
 }
 
 /* Row 1.3: Personal Tag Line*/
+.oneLinerRow {
+    margin-bottom: 10px;
+}
 .oneLinerDiv {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: lighter;
     font-style: oblique;
     text-align: center;
-    margin-bottom: 25px;
-
 }
+
 /* Row 2: Main Menu*/
 .menuButton {
     background-color: #d0dbe2;
@@ -41,7 +41,10 @@ body {
     margin-right: 4%;
     border: none;   
     color: black;
+}
 
+.button:hover {
+    background-color: #d0dbe2;
 }
 /* Row 2: Main Menu On Opening Page*/
 .menuStart {
@@ -57,6 +60,7 @@ body {
     position: fixed;
 }
 
+
 /* Row 2: Main Menu on Scrolling Page 
 Moves to top of page */
 .menuTop {
@@ -66,13 +70,15 @@ Moves to top of page */
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    /*z index to combate textsection img carousel */
+   /* z index to combate textsection img carousel */
     z-index: 10;
 }
 
-/* TextSection Components General (Project Section /About Me)*/
+.textHeader, .first, .none, .textDict {
+        margin-left: 10%;
+}
+/* TextSection Components General (Project Section /About Me)
 .textSection{
-    margin-left: 10%;
     margin-top: 30px;
 }
 /* TextSection Head Title of TextSection */
@@ -107,26 +113,25 @@ Moves to top of page */
 }
 /* TextSection.img Image section of TextSection */
 .imgCarouselDiv{
+    display: block;
     width: 50%;
     padding: 0px;
-    margin-left: 15%;
+    margin: 0 auto;
 }
 
 .imgCarouselList {
     position: relative;
     /*height is essential for .isSeen position absolute to have static location as anscestor*/
-    height: 400px;
     padding: 0px;
-    margin: 0px;
     list-style-type: none;
-    display: block;
-    /*margin: auto 0;*/
+    display: inline-block; 
+    height: 400px;
 }
+
+
 .carouselProjects li img{
     border: 1px gray solid;
-    height: 400px;
-/*    width: 500px;
-    width: 100%;*/
+    display: inline-block; 
 }
 
 .isSeen {
@@ -207,7 +212,7 @@ Moves to top of page */
         height: 250px;
         padding: 0px;
         margin: 0px;
-        /*background-color: orange;*/
+        background-color: orange;
         padding-bottom: 15%;
         /*margin-bottom: 0px;*/
         list-style-type: none;

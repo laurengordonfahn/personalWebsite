@@ -17,28 +17,33 @@ class Header extends Component {
   }
 
   render() {
+    let cls= `${this.props.name} container `;
     return (
-      <div className={this.props.name} >
+      <div className="container">
 
-        <div className="headerInnerDiv">
+        <div className="row">
 
-          <div className="imgDiv">
+          <div className="column">
             <img className="yourImg" src={this.props.yourImg} alt={this.props.name} />
           </div>
 
-          <div className="headerBuffer"></div>
-
-          <div className="nameDiv">
-            <div className="yourName"> {this.props.yourName} </div>
-          </div>
-          
-          <div className="oneLinerDiv">
-            {this.props.oneLiner} 
-          </div>
-          
         </div>
-        
+
+
+          <div className="row">
+            <div className="yourName column column-50 column-offset-25"> {this.props.yourName} </div>
+          </div>
+
+          <div className="row oneLinerRow">
+
+            <div className="oneLinerDiv column column-50 column-offset-25">
+              {this.props.oneLiner} 
+            </div>
+          </div>
+          
       </div>
+        
+      
     );
   }
 }

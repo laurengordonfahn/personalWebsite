@@ -17,11 +17,11 @@ import newspaperGlyph from '../images/newspaper.png';
 import facebookGlyph from '../images/facebook.png';
 import githubGlyph from '../images/github.png';
 import linkedInGlyph from '../images/linkedin.png';
-import daily1 from '../images/daily1a.png';
-import daily2 from '../images/daily2a.png';
-import daily3 from '../images/daily3a.png';
-import notebook1 from '../images/notebook1a.png';
-import notebook2 from '../images/notebook2a.png';
+import daily1 from '../images/daily1b.png';
+import daily2 from '../images/daily2b.png';
+import daily3 from '../images/daily3b.png';
+import notebook1 from '../images/notebook1b.png';
+import notebook2 from '../images/notebook2b.png';
 import resume from '../images/LaurenGordon-Fahn_Resume7_17.pdf';
 
 
