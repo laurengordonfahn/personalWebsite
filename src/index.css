@@ -74,10 +74,11 @@ Moves to top of page */
     z-index: 10;
 }
 
+/* Many headers */
 .textHeader, .first, .none, .textDict {
-        margin-left: 10%;
+    margin-left: 10%;
 }
-/* TextSection Components General (Project Section /About Me)
+ /*TextSection Components General (Project Section /About Me)*/
 .textSection{
     margin-top: 30px;
 }
@@ -88,41 +89,42 @@ Moves to top of page */
 }
 /* TextSection.first Sub Title of TextSection */
 .first{
-    font-size: 20px;
+    font-size: 25px;
     margin-top:20px;
     margin-bottom:20px;
+    font-weight: lighter;
 }
 /* TextSection.none Text section of TextSection */
 .none {
     display: block;
     font-weight: lighter;
 }
-/* TextSection List with Header (Projects -Tech Stack, AboutMe-Thought Process)*/
+/* TextSection List with Header (Projects -Tech Stack, AboutMe-Thought Process)
 /*Text section List Header*/
-.textListHeader {
+/*.textListHeader {
     font-weight: bold;
-}
+}*/
 /* TextSection list content*/
-.textDict, ul {
+/*.textDict, ul {
     display: inline-block;
     padding-left: 0px;
 
 }
 .textList {
    font-weight: lighter; 
-}
+}*/
 /* TextSection.img Image section of TextSection */
-.imgCarouselDiv{
+/*.imgCarouselDiv{
     display: block;
     width: 50%;
     padding: 0px;
     margin: 0 auto;
-}
+}*/
 
-.imgCarouselList {
-    position: relative;
+/*.imgCarouselList {
+    position: relative;*/
     /*height is essential for .isSeen position absolute to have static location as anscestor*/
-    padding: 0px;
+    /*padding: 0px;
     list-style-type: none;
     display: inline-block; 
     height: 400px;
@@ -133,23 +135,25 @@ Moves to top of page */
     border: 1px gray solid;
     display: inline-block; 
 }
-
+*/
+.imgCarouselList{
+    margin-bottom: 10px;
+}
 .isSeen {
-    /*position: relative;*/
-    position: absolute;
-    /*height: 100%;*/
+    position: relative;
     opacity: 1;
     z-index: 2;
     display: inline-block;
 }
 
 .isNotSeen {
-    /*position: relative;*/
-    position: absolute;
-    /*height: 100%;*/
+    display:none !important;
+    /*
+    position: relative;
     opacity: 0;
     z-index: 1;
     display: inline-block;
+    */
 }
 
 @media only screen and (max-width: 1100px) {
@@ -164,17 +168,17 @@ Moves to top of page */
         width: 100vw;
         padding-top: 20px;
         padding-bottom: 20px;
-        /*z index to combate textsection img carousel */
+        /*z index to combate textsection img carousel 
         z-index: 10;
         /*fixed position to keep at top of page until scroll*/
-        /*position: absolute;*/
+        position: absolute;
     }
 
     .textSection {
         margin-left: 0px;
     }
 
-   .imgCarouselDiv{
+   /*.imgCarouselDiv{
         width: 100%;
         padding: 0px;
         margin: 0px;
@@ -193,7 +197,7 @@ Moves to top of page */
     .carouselProjects li img{
         border: 1px gray solid;
         height: 300px;
-    }
+    }*/
 
     .btnCarouselDiv {
         margin-top: 20px;
@@ -324,45 +328,47 @@ Moves to top of page */
 /* TextSection.img.button Buttons section of TextSection Images*/
 .btnCarouselDiv {
     display: block;
-    margin-bottom: 10px;
     margin-top: 10px;
 }
 
+.button {
+    background-color: #d0dbe2;
+    border-color: #d0dbe2;
+}
 
+.button:hover {
+    border-color: #d0dbe2;
+}
+
+.btnCarouselDiv {
+    margin-left: 20%;
+}
 .btnbackwardImg {
-    float: left;
-    position: relative;
+    border-radius: 5px 0px 0px 5px;
     font-size: 25px;
-    left: 15px;
     color: black;
     cursor: pointer;
 }
 
-
 .btnforwardImg {
-    float: right;
-    position: relative;
+    border-radius: 0px 5px 5px 0px;
     font-size: 25px; 
-    right: 15px;
     color:black;
     cursor: pointer;
 }
 
-.carouselDirectBtnDiv{
+.imgLinkDiv {
     display: inline-block;
-    padding: 3px;
-    height: 35px;
-    width: 100px;
-   /* margin-left: 20%;*/
-    margin-top: 10px;
-    background-color: #d0dbe2;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.carouselLinkBtnDiv{
+.imgLinkAnchor {
+    margin-left: 10px;
     display: inline-block;
-    margin-left: 15px;
+    vertical-align: bottom;
+}
+
+.linkImg {
+    display: block;
 }
 
 .anchorLink {
@@ -372,13 +378,12 @@ Moves to top of page */
     color: black;
 }
 
-.carouselLinkBtnDiv .anchorLink{
-    margin-right: 10px;
-}
+
 
 
 
 /*Specialty TextSection for AboutMe section*/
+
 .About .textDict {
     overflow:auto;
     display: block;
@@ -447,13 +452,13 @@ ul {
     display: block;
 }
 
-.linkImg {
+/*.linkImg {
    margin-top: 0px; 
    margin-bottom: 5px;
    display: block;
    margin: 0 auto;
 
-}
+}*/
 .linkDiv li {
     text-align: center;
 }

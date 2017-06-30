@@ -8,11 +8,14 @@ class LinkImages extends Component {
     // let classN = "LinkImagesSection" + " " + this.props.byline
     return (
       
-        
-        <a  key={this.props.link} className="anchorLink" href={this.props.link}>
-          <img className="linkImg" src={this.props.img} alt={this.props.name} />  
+      <div className="imgLinkDiv">  
+        <a  key={this.props.link} className="imgLinkAnchor " href={this.props.link}>
+         
+          <img className="linkImg" src={this.props.img} alt={this.props.name} /> 
+         
         </a>
-        
+      </div>
+      
       
     );
   }

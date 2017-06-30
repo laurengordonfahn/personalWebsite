@@ -48,24 +48,27 @@ class App extends Component {
           {"none": "I am a passionate and compassionate problem solver with a B.S. in Theoretical Mathematics, a Masters in Acupuncture & Chinese Medicine, and Hackbright bootcamp under my belt. I am in love with making organization tools that are user friendly through software engineering. I love solving problems with a team, be it engineers or doctors."}
         ],
         [
-          {"Traits of a Math Mind":  
-            [
-              "A love for logical thought and problem solving", "Organization of large bodies of information", "The importance of abstraction in solving problems"
-            ]
+          {"third":
+            {"Traits of a Math Mind":  
+            
+             [ "A love for logical thought and problem solving", "Organization of large bodies of information", "The importance of abstraction in solving problems"]
+            }
           }
         ],
         [
-          {"Traits of an Acupuncturist" : 
-            [
-              "Listening", "Dedicated to team work", "Organizing strategic long term plans for treatment", "Explaining information that is not native to someone"
-            ]
+          {"third":
+            {"Traits of an Acupuncturist" : 
+              
+                ["Listening", "Dedicated to team work", "Organizing strategic long term plans for treatment", "Explaining information that is not native to someone"]
+            }
           }
         ],
         [
-          {"Traits of a Bootcamp Graduate":  
-            [
-              "Fast dedicated learner", "Being humble and googling my heart out"
-            ]
+          {"third":
+            {"Traits of a Bootcamp Graduate":  
+              
+                ["Fast dedicated learner", "Being humble and googling my heart out"]
+            }
           }
         ]
       ],

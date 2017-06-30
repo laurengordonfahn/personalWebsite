@@ -15,9 +15,9 @@ class Carousel extends Component {
   }
 
   handleBackwardClick(e, lenCarousel) {
-      console.log("backward",lenCarousel);
+      
       let current = this.state.isCurrent;
-      console.log("isCurrent", current);
+      
       if ((current - 1) !== -1) {
         current = (current - 1)%lenCarousel;
         this.setState({isCurrent: current});
@@ -29,19 +29,19 @@ class Carousel extends Component {
     }
 
     handleForwardClick(e, lenCarousel) {
-      console.log("forward",lenCarousel);
+    
       let current = this.state.isCurrent;
-      console.log("isCurrent", current);
+      
       current = (current + 1)%lenCarousel;
       this.setState({isCurrent: current});
     }
 
   renderCarouselImg(img, i) {
     let isCurrent = this.state.isCurrent;
-    console.log("i", i)
+    let cls = `carouselImg column column-60 column-offset-20 ${i === isCurrent ? "isSeen": "isNotSeen"}`;
     return ( 
-        <li key={img}>
-          <img className="carouselImg" className={i === isCurrent ? "isSeen": "isNotSeen"} src={img} alt={img} />
+        <li key={img} className={cls}>
+          <img src={img} alt={img} />
         </li>
       
       );
@@ -65,10 +65,9 @@ class Carousel extends Component {
     let lenCarousel = this.props.imgList.length;
     if (lenCarousel > 1){
       return (
-        <div className="imgCarouselDiv">
-          <div className={name}>
-           
-            <ul className="imgCarouselList">
+        
+          <div>
+            <ul className="imgCarouselList row">
 
               {this.props.imgList.map((img, i) => {
                 return this.renderCarouselImg(img, i);
@@ -76,35 +75,36 @@ class Carousel extends Component {
 
             </ul>
 
+           
             <div className="btnCarouselDiv">
-              <div className="carouselDirectBtnDiv">
-                <div className="btnbackwardImg" onClick={e => {this.handleBackwardClick(e, lenCarousel);} }> &larr; </div>
-                <div className="btnforwardImg" onClick={e => {this.handleForwardClick(e, lenCarousel);} } > &rarr; </div>
-              </div>
-              <div className="carouselLinkBtnDiv">
-                {this.props.carouselInfo.linkImg.map(linkImg => { return this.renderLinkImgDiv(linkImg)})}
-              </div>
+              <button className="button btnbackwardImg" onClick={e => {this.handleBackwardClick(e, lenCarousel);} }> &larr; </button>
+              <button className="button btnforwardImg" onClick={e => {this.handleForwardClick(e, lenCarousel);} } >  &rarr;  </button>
+          
+           
+              {this.props.carouselInfo.linkImg.map(linkImg => { return this.renderLinkImgDiv(linkImg)})}
+
             </div>
+
           </div>
-        </div>
+          
       );
     } else {
+      
       return (
-        <div className="imgCarouselDiv">
-          <div className={name}>
+          <div>
            
-            <ul className="imgCarouselList">
+            <ul className="imgCarouselList row">
 
               {this.props.imgList.map((img, i) => {
                 return this.renderCarouselImg(img, i);
               })}
 
             </ul>
-            <div className="carouselLinkBtnDiv">
+            <div className="carouselLinkBtnDiv row">
                 {this.props.carouselInfo.linkImg.map(linkImg => { return this.renderLinkImgDiv(linkImg)})}
             </div>
+
           </div>
-        </div>
       );
     }
 

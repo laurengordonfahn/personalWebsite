@@ -29,14 +29,15 @@ class TextSection extends Component {
       
       const indKey = Object.keys(miniDict)[0];
       const indVal = miniDict[indKey];
-      
     
       if(indKey ==="first" || indKey==="none"){
         
         return ( 
-          
-          <div key={indVal} className={indKey}>{indVal} </div> 
-         
+          <div className="row">
+            <div key={indVal} className="column">
+              <div className={indKey}>{indVal} </div> 
+            </div>
+          </div>
         );
 
       } 
@@ -52,10 +53,34 @@ class TextSection extends Component {
       else if (indKey==="linkImg"){
         
         return(
-          <div className="textLinkImgDiv">
+          <div className="textLinkImgDiv row">
             {indVal.map(obj => {
               return this.renderLinkImgDiv(obj);
             })}
+          </div>
+        );
+      }
+
+      else if (indKey === "third") {
+
+        const dictKey = Object.keys(indVal)[0];
+        const dictVal = indVal[dictKey];
+        
+        const li = dictVal.map(item => {
+          
+          return (<li key={item} className="textList"> {item} </li>);
+        });
+
+        return(
+          <div className="container">
+            <div className="row">
+
+              <div className="column"> 
+                <div> {dictKey} </div>
+                <div> <ul> <span className="textListHeader"> {dictVal} </span> {li} </ul></div>
+              </div>
+
+            </div>
           </div>
         );
       }
@@ -81,9 +106,13 @@ class TextSection extends Component {
   render() {
     
     return (
-      <div className="textSection">
-        <div className={this.props.name} >
-          <div className="textHeader"> {this.props.name} </div>
+      <div className="textSection container">
+        <div className="row" >
+          <div className="column"> 
+            <div className="textHeader"> {this.props.name} </div> 
+          </div>
+        </div>
+
           <div className="textText">
 
             {this.props.stateName.map(elem => {
@@ -91,7 +120,7 @@ class TextSection extends Component {
             })}
 
           </div>
-        </div>
+        
       </div>
     );
   }
