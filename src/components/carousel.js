@@ -77,8 +77,8 @@ class Carousel extends Component {
 
            
             <div className="btnCarouselDiv">
-              <button className="button btnbackwardImg" onClick={e => {this.handleBackwardClick(e, lenCarousel);} }> &larr; </button>
-              <button className="button btnforwardImg" onClick={e => {this.handleForwardClick(e, lenCarousel);} } >  &rarr;  </button>
+              <div className="button btnbackwardImg" onClick={e => {this.handleBackwardClick(e, lenCarousel);} }> &larr; </div>
+              <div className="button btnforwardImg" onClick={e => {this.handleForwardClick(e, lenCarousel);} } >  &rarr;  </div>
           
            
               {this.props.carouselInfo.linkImg.map(linkImg => { return this.renderLinkImgDiv(linkImg)})}

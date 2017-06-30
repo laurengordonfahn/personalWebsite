@@ -43,9 +43,11 @@
     color: black;
 }
 
-.button:hover {
-    background-color: #d0dbe2;
+.menuButton:hover {
+    background-color: #606c76;
 }
+
+    
 /* Row 2: Main Menu On Opening Page*/
 .menuStart {
     background-color:#d0dbe2;
@@ -138,6 +140,10 @@ Moves to top of page */
 */
 .imgCarouselList{
     margin-bottom: 10px;
+}
+
+.imgCarouselList li img {
+    border: solid 1px gray;
 }
 .isSeen {
     position: relative;
@@ -340,6 +346,12 @@ Moves to top of page */
     border-color: #d0dbe2;
 }
 
+
+.btnbackwardImg:focus, .btnforwardImg:focus{
+    background-color: #606c76;
+    color: white;
+}
+
 .btnCarouselDiv {
     margin-left: 20%;
 }
@@ -348,13 +360,16 @@ Moves to top of page */
     font-size: 25px;
     color: black;
     cursor: pointer;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 .btnforwardImg {
     border-radius: 0px 5px 5px 0px;
     font-size: 25px; 
     color:black;
-    cursor: pointer;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 .imgLinkDiv {
