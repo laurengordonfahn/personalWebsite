@@ -12,7 +12,6 @@ class LinkMenu extends Component {
     let name=elem[0]["name"];
     let link=elem[0]["link"];
     let img= elem[0]["img"];
-    let byline=elem[0]["byline"]
 
     return(
       <li key={name} className="linkDiv">
