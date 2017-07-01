@@ -16,11 +16,11 @@ class LinkMenu extends Component {
     return(
       <li key={name} className="linkDiv">
         
-          <a key={name} className="anchorLink" href={link}>
-            <img className="linkImg" src={img} alt={name} />  
-            <span className="linkTitle">{name} </span>
-            < br/>
-          </a>
+        <a key={name} className="anchorLink" href={link}>
+          <img className="linkImg" src={img} alt={name} />  
+          <span className="linkTitle">{name} </span>
+          < br/>
+        </a>
 
       </li>
     );
