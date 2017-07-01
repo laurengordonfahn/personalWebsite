@@ -60,7 +60,6 @@ class Carousel extends Component {
   }
 
   render() {
-    let name = "carousel" + this.props.name
     let lenCarousel = this.props.imgList.length;
     if (lenCarousel > 1){
       return (
