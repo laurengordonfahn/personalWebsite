@@ -5,18 +5,14 @@ class LinkImages extends Component {
  
 
   render() {
-    // let classN = "LinkImagesSection" + " " + this.props.byline
     return (
       
       <div className="imgLinkDiv">  
         <a  key={this.props.link} className="imgLinkAnchor " href={this.props.link} title={this.props.name}>
          
           <img className="linkImg" src={this.props.img} alt={this.props.name} title={this.props.name}/> 
-         
         </a>
       </div>
-      
-      
     );
   }
 }
