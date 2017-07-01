@@ -6,7 +6,6 @@ import ReactTimeout from "react-timeout";
 import Header from './header';
 import Menu from './menu';
 import LinkMenu from './linkMenu';
-// import DictionarySection from './dictionarySection';
 import TextSection from './textSection';
 import List from './list';
 
@@ -24,10 +23,7 @@ import notebook1 from '../images/notebook1b.png';
 import notebook2 from '../images/notebook2b.png';
 import resume from '../images/LaurenGordon-Fahn_Resume7_17.pdf';
 
-
-
-// var Link       = Scroll.Link;
-var Element    = Scroll.Element;
+var Element = Scroll.Element;
 
 
 class App extends Component {
@@ -131,18 +127,13 @@ class App extends Component {
           {"none": "Notebook is a one-page dynamic notebook application which allows users to create, edit, organize, and delete notes.  Facebook Sign-In is used for authentication and the app is powered by a RESTful API written with Flask."
           },
           {"Tech Stack": ["PostgreSQL, SQLAlchemy, Python, Flask, JavaScript, jQuery, Ajax, OAuth2, Unittest"]}
-  
         ],
-
       ],
-
       subSection: "Overview",
       isTop: false,
       y: window.scrollY ,
       offSetVal: -150,
       headerHeight: 260
-      
-    
     };
   }
 
@@ -207,7 +198,7 @@ class App extends Component {
           handleScrollCallback={this.handleScrollCallback} 
         />
 
-         <Element name="Top" className="element">
+        <Element name="Top" className="element">
           <Header 
             name="header" 
             yourImg={this.state.yourImg} 
@@ -245,7 +236,6 @@ class App extends Component {
           <LinkMenu linkOptions={this.state.linkOptions} />
         </Element>
         
-
       </div>
     );
   }
