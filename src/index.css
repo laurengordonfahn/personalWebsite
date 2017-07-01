@@ -169,7 +169,7 @@ Moves to top of page */
     line-height: normal;
 }
 
-.imgLinkDiv {
+.carouselLinkImgDiv {
     display: inline-block;
 }
 
@@ -181,6 +181,17 @@ Moves to top of page */
 
 .linkImg {
     display: block;
+}
+
+@media only screen and (max-width: 544px) {
+    .carouselLinkImgDiv {
+        display: block;
+        margin-left: 20%;
+    }
+    .imgLinkDiv {
+        display: inline-block;
+        float: left;
+    }
 }
 
 .textListHeader {

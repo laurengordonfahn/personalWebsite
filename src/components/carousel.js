@@ -54,7 +54,9 @@ class Carousel extends Component {
     let img=linkImg.img;
 
     return(
-      <LinkImages key={link} name={name} byline={byline} link={link} img={img} />
+      <div className="carouselLinkImgDiv">
+        <LinkImages key={link} name={name} byline={byline} link={link} img={img} />
+      </div>
       
     );
         
