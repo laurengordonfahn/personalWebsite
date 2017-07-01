@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import Images from './images';
 import LinkImages from './linkImages';
 import Carousel from './carousel';
+
 class TextSection extends Component {
   constructor(){
     super();
-    this.renderText = this.renderText.bind(this);
     this.renderLinkImgDiv = this.renderLinkImgDiv.bind(this);
-    
+    this.renderText = this.renderText.bind(this);
   }
 
   renderLinkImgDiv (obj) {
@@ -18,9 +17,7 @@ class TextSection extends Component {
 
     return(
       <LinkImages key={link} name={name} link={link} img={img} />
-      
-    );
-        
+    );    
   }
 
   renderText(elem) {
@@ -39,18 +36,13 @@ class TextSection extends Component {
             </div>
           </div>
         );
-
-      } 
-      else if (indKey ==="img"){
+      } else if (indKey ==="img"){
         let imgList = indVal["img"];
     
         return(
-
           <Carousel key={elem[indKey]} name={this.props.name} imgList={imgList} carouselInfo={miniDict[indKey]} />
         );
-      } 
-      
-      else if (indKey==="linkImg"){
+      } else if (indKey==="linkImg"){
         
         return(
           <div className="textLinkImgDiv row">
@@ -59,9 +51,7 @@ class TextSection extends Component {
             })}
           </div>
         );
-      }
-
-      else if (indKey === "third") {
+      } else if (indKey === "third") {
 
         const dictKey = Object.keys(indVal)[0];
         const dictVal = indVal[dictKey];
@@ -85,9 +75,7 @@ class TextSection extends Component {
             </div>
           </div>
         );
-      }
-
-      else {
+      } else {
       
         const li = miniDict[indKey].map(item => {
           
@@ -99,29 +87,26 @@ class TextSection extends Component {
             <ul> <span className="textListHeader"> {indKey} </span> {li} </ul>
           </div>
         );
-      }
-        
+      } 
     });
-  
   }
 
   render() {
     let cls = `textSection container ${this.props.name}`;
     return (
       <div className={cls}>
+
         <div className="row" >
           <div className="column"> 
             <div className="textHeader"> {this.props.name} </div> 
           </div>
         </div>
 
-          <div className="textText">
-
-            {this.props.stateName.map(elem => {
-              return this.renderText(elem);
-            })}
-
-          </div>
+        <div className="textText">
+          {this.props.stateName.map(elem => {
+            return this.renderText(elem);
+          })}
+        </div>
         
       </div>
     );
@@ -130,6 +115,6 @@ class TextSection extends Component {
 
 TextSection.propTypes = {
   name: PropTypes.string,
-  stateName: PropTypes.arrayOf(PropTypes.object)
+  stateName: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object))
 }
 export default TextSection;
