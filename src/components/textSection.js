@@ -68,18 +68,20 @@ class TextSection extends Component {
         
         const li = dictVal.map(item => {
           
-          return (<li key={item} className="textList"> {item} </li>);
+          return (<li key={item} className="textList column"> {item} </li>);
         });
 
         return(
-          <div className="container">
-            <div className="row">
+          <div className="subSectionDiv">
+            <div className="subSection">
+              <div className="row">
 
-              <div className="column"> 
-                <div> {dictKey} </div>
-                <div> <ul> <span className="textListHeader"> {dictVal} </span> {li} </ul></div>
+                <div className="thoughtSection column"> 
+                  <div className="thirdTitle"> {dictKey} </div>
+                  <div> <ul className="thirdUl"> {li} </ul></div>
+                </div>
+
               </div>
-
             </div>
           </div>
         );
@@ -104,9 +106,9 @@ class TextSection extends Component {
   }
 
   render() {
-    
+    let cls = `textSection container ${this.props.name}`;
     return (
-      <div className="textSection container">
+      <div className={cls}>
         <div className="row" >
           <div className="column"> 
             <div className="textHeader"> {this.props.name} </div> 

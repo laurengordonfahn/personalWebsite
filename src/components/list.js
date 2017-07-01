@@ -13,13 +13,19 @@ class List extends Component {
     return elem.map(item => {
       return Object.keys(item).map(dictKey => {
         return ( 
-          <div key={dictKey}>
-            <div className="listTitle"> {dictKey} </div>
-            <ul className="listItemHeader"> 
-              {item[dictKey].map(lst => {
-                return (<li key={lst} className="listListItem"> {lst} </li>);
-              })}
-            </ul> 
+          <div>
+            <div key={dictKey} className="row listTitleDiv" >
+              
+                
+              <div className="listTitle"> {dictKey} </div>
+                
+            
+              <ul className="listItemUl"> 
+                {item[dictKey].map(lst => {
+                  return (<li key={lst} className="listListItem"> {lst} </li>);
+                })}
+              </ul> 
+            </div>
           </div>
         );
       })
@@ -28,9 +34,13 @@ class List extends Component {
 
   render() {
     return (
-      <div className="listSection">
-        <div className={this.props.name} >
-          <div className="listHeader"> {this.props.name} </div>
+      <div className="listSection container">
+        <div className="row">
+          <div className="column">
+            <div className="listHeader"> {this.props.name} </div>
+          </div>
+        </div>
+
           <div className="listText">
 
             {this.props.stateName.map(elem => {
@@ -38,7 +48,6 @@ class List extends Component {
             })}
 
           </div>
-        </div>
       </div>
     );
   }

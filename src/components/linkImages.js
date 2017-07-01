@@ -9,9 +9,9 @@ class LinkImages extends Component {
     return (
       
       <div className="imgLinkDiv">  
-        <a  key={this.props.link} className="imgLinkAnchor " href={this.props.link}>
+        <a  key={this.props.link} className="imgLinkAnchor " href={this.props.link} title={this.props.name}>
          
-          <img className="linkImg" src={this.props.img} alt={this.props.name} /> 
+          <img className="linkImg" src={this.props.img} alt={this.props.name} title={this.props.name}/> 
          
         </a>
       </div>
