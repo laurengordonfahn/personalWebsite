@@ -16,7 +16,6 @@ class Header extends Component {
   }
 
   render() {
-    let cls= `${this.props.name} container`;
 
     return (
       <div className="container">
