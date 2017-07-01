@@ -2,32 +2,30 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class LinkMenu extends Component {
-    constructor() {
-      super();
-      this.renderLinkOptions = this.renderLinkOptions.bind(this);
-    }
+  constructor() {
+    super();
+    this.renderLinkOptions = this.renderLinkOptions.bind(this);
+  }
 
-    renderLinkOptions(elem) {
-      
-      let name=elem[0]["name"];
-      let link=elem[0]["link"];
-      let img= elem[0]["img"];
-      let byline=elem[0]["byline"]
+  renderLinkOptions(elem) {
+    
+    let name=elem[0]["name"];
+    let link=elem[0]["link"];
+    let img= elem[0]["img"];
+    let byline=elem[0]["byline"]
 
+    return(
+      <li key={name} className="linkDiv">
+        
+          <a key={name} className="anchorLink" href={link}>
+            <img className="linkImg" src={img} alt={name} />  
+            <span className="linkTitle">{name} </span>
+            < br/>
+          </a>
 
-      return(
-        <li key={name} className="linkDiv">
-          
-            <a key={name} className="anchorLink" href={link}>
-              <img className="linkImg" src={img} alt={name} />  
-              <span className="linkTitle">{name} </span>
-              < br/>
-              
-            </a>
-     
-        </li>
-      );
-    }
+      </li>
+    );
+  }
 
   render() {
     return (
@@ -42,9 +40,8 @@ class LinkMenu extends Component {
   }
 }
 
-//check linkOptions
 LinkMenu.propTypes = {
-  linkOptions: PropTypes.arrayOf(PropTypes.object)
+  linkOptions: PropTypes.arrayOf(PropTypes.array)
 }
 
 export default LinkMenu;
