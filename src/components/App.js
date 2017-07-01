@@ -80,10 +80,10 @@ class App extends Component {
           "name": "Facebook", "byline":"facebookLink","link": "https://www.facebook.com/search/top/?q=Lauren+Gordon+New&init=public", "img": facebookGlyph
         }], 
         [{
-          "name": "Daily", "byline": "DailyProjectLink", "link": "http://dailytrackingcalendar.herokuapp.com", "img": calendarGlyph
+          "name": "Daily App", "byline": "DailyProjectLink", "link": "http://dailytrackingcalendar.herokuapp.com", "img": calendarGlyph
         }], 
         [{
-          "name": "Notebook", "byline": "NotebookProjectLink", "link": "http://notebookonline.herokuapp.com", "img": notebookGlyph
+          "name": "Notebook App", "byline": "NotebookProjectLink", "link": "http://notebookonline.herokuapp.com", "img": notebookGlyph
         }],
         [{
           "name": "Resume", "byline": "Resume", "link": resume, "img": newspaperGlyph
