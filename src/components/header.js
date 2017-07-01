@@ -5,7 +5,6 @@ class Header extends Component {
   constructor(){
     super();
     this.renderList = this.renderList.bind(this);
-    
   }
 
   renderList(elem) {
@@ -17,33 +16,28 @@ class Header extends Component {
   }
 
   render() {
-    let cls= `${this.props.name} container `;
+    let cls= `${this.props.name} container`;
+
     return (
       <div className="container">
 
         <div className="row">
-
           <div className="column">
             <img className="yourImg" src={this.props.yourImg} alt={this.props.name} />
           </div>
-
         </div>
 
+        <div className="row">
+          <div className="yourName column column-50 column-offset-25"> {this.props.yourName} </div>
+        </div>
 
-          <div className="row">
-            <div className="yourName column column-50 column-offset-25"> {this.props.yourName} </div>
+        <div className="row oneLinerRow">
+          <div className="oneLinerDiv column column-50 column-offset-25">
+            {this.props.oneLiner} 
           </div>
-
-          <div className="row oneLinerRow">
-
-            <div className="oneLinerDiv column column-50 column-offset-25">
-              {this.props.oneLiner} 
-            </div>
-          </div>
+        </div>
           
       </div>
-        
-      
     );
   }
 }
