@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-var Scroll  = require('react-scroll');
+var Scroll = require('react-scroll');
 
-var Link       = Scroll.Link;
+var Link = Scroll.Link;
 
 
 class Menu extends Component {
   constructor() {
     super();
-    this.renderPageOptions = this.renderPageOptions.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.renderPageOptions = this.renderPageOptions.bind(this);
   }
 
   handleClick(e){
