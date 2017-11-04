@@ -36,6 +36,7 @@ If using npm :
     $npm install
 ```
 3) For your information these are the project requirements found in the package.json file
+
 ```
 {
   "name": "personal_website",
@@ -58,9 +59,10 @@ If using npm :
     "eject": "react-scripts eject"
   }
 }
+```
 
 4) Note that package.json was first sourced off of create-react-app. If you want to read more: https://github.com/facebookincubator/create-react-app/blob/master/README.md
-```
+
 ## Installing:
 
 1) To run the front-end:
