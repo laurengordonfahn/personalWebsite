@@ -35,7 +35,7 @@ class App extends Component {
 
     this.state = {
       yourName: "Lauren Gordon-Fahn",
-      oneLiner: "San Francisco Junior Developer, In Love With JavaScript!",
+      oneLiner: "Junior Developer, In Love With JavaScript!",
       yourImg: yourImg,
       pageSections: ["Projects", "Stack", "About Me", "Contacts"],
 
